@@ -1,0 +1,1562 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+
+ file name  :common.css
+ author     :RUBY DESIGN.
+style info  :設定　ハックは最下部に記述
+=================================================================== */
+/*----------------------------------------------------
+	基本設定、リンクカラーなど
+----------------------------------------------------*/
+html{
+ font-size: 62.5%;
+ margin: 0 !important;
+}
+section{
+    margin: 0 auto 6rem;
+}
+body {
+    padding-top: 120px;
+    color: #000;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-family: "游ゴシック",Futura Medium, sans-serif!important;
+    font-weight: normal;
+    line-height: 1.8;
+    background: #fff;
+}
+#loadgo-logo-overlay img{
+    width: 230px !important;
+}
+/*----------------------------------------------------
+    a リンク設定
+----------------------------------------------------*/  
+a{
+  overflow:hidden;
+  outline:none; 
+}
+a.active{
+    background: rgba(208, 208, 208, 0.15);
+}
+a:link {
+    color: #000; 
+    text-decoration: none;
+}
+a:visited {
+    color: #454545;
+    text-decoration: none;
+}
+a:hover {
+    color: #454545;
+    text-decoration: none;
+}
+a:hover img{
+    opacity: 0.7;
+}
+/*----------------------------------------------------
+    .btn_more ボタン設定
+----------------------------------------------------*/  
+.btn_more{
+    text-align: center;
+}
+.btn_more a{
+    border: 1px solid #454545;
+    border-radius: 4px;
+    padding: 10px 20px;
+    min-width: 200px;
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+}
+.btn_more a:hover{
+    border: 1px solid #454545;
+    background: #454545;
+    color: #fff;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+/*----------------------------------------------------
+   .box_l .box_r フロート設定
+----------------------------------------------------*/ 
+.clear_fix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;   
+}
+.box_l{
+    float: left;
+}
+.box_r{
+    float: right;
+}
+/*----------------------------------------------------
+   h1 h2 h3 フォント設定
+----------------------------------------------------*/ 
+h1{
+    width: 190px;
+    padding: 0 0 5px;
+}
+h1 span{
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #8e8e8e;
+}
+h1 img{
+    display: block;
+}
+h2{
+    font-family: 'Didact Gothic', sans-serif; 
+    font-size: 2.5rem;
+    padding: 7rem 0;
+}
+h2 span{
+    font-size: 1.8rem;
+}
+img{
+	width: 100%;
+	display: block;
+}
+.s{
+    font-size: 50%;
+}
+.last{
+    padding: 0 !important;
+}
+/*----------------------------------------------------
+　#fv-loading-wrap ロゴのローディングアクション
+----------------------------------------------------*/
+#fv-loading-wrap{
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: #fff;
+}
+#fv_logo_ruby{
+   display: table-cell;
+   vertical-align: middle;
+}
+#fv_logo_ruby .icn_logo_ruby{
+    width: 260px;
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -30px;
+}
+/*----------------------------------------------------
+　#pageloading-wrap ローディングのモーション設定
+----------------------------------------------------*/
+#home  #pageloading-wrap{
+    display: none;
+}
+#pageloading-wrap {
+    background: rgba(255, 255, 255, 0.9);
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   text-align: center;
+   display: table;
+   z-index: 1;
+}
+#pageloading-icon {
+   display: table-cell;
+   vertical-align: middle;
+}
+/*----------------------------------------------------
+　.breadcrumbs パンくずリスト設定
+----------------------------------------------------*/ 
+.breadcrumbs {
+    margin-left: 0;
+    padding: 5px 0;
+    width: 960px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+.breadcrumbs span[property="name"] {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.breadcrumbs a span{
+    text-decoration: underline;
+}
+.quads-ad1,
+.quads-ad2,
+.quads-ad3{
+    padding: 1rem 0;
+}
+.smoll_sps{
+    text-align: left;
+    color: #868686;
+    font-size: 1.3rem;  
+}
+.wp-embedded-content {
+    width:100%;
+}
+.wp-embed-featured-image.square{
+    max-width: 360px;
+}
+.wp-embed-featured-image img{
+    width: 255px;
+}
+/*----------------------------------------------------
+ .pager
+----------------------------------------------------*/  
+.wp-pagenavi{
+    margin: 0 0 60px;
+    padding: 8px 0;
+    text-align: center;
+}
+.wp-pagenavi span,
+.wp-pagenavi a {
+    margin: 0 1px;
+    font-size: 1.6rem;
+    padding: 0.6em 1em;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+.wp-pagenavi span:hover,
+.wp-pagenavi a:hover {
+    background: #333;
+    color: #FFF;
+}
+.wp-pagenavi span.current{
+    border: none;
+    background: #333;
+    color: #FFF;
+}
+/*----------------------------------------------------
+   その他の設定
+----------------------------------------------------*/ 
+.blog_info .wrap_menu,
+#header .nav, 
+#works_area .wrap_works .box_works,
+#footer .contact_area .box_ctc{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+#homepage .wrap_cnt{
+    background: #fbfbfb;
+    width: 100%;
+}
+/*----------------------------------------------------
+    #header   ヘッダー
+----------------------------------------------------*/ 
+#header #sp_header,
+#header .sp_hdr_button,
+#header .sp_hdr_menu,
+#header .sp_column_box{
+    display: none;
+}
+#header {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    border: 1px solid #f1f1f1;
+}
+#header .logo_area{
+    width: 1000px;
+    margin: 0 auto;
+    height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#header .hdr_copy{
+    color: #929292;
+    margin-left: 53px;
+    font-size: 1.4rem;
+}
+
+div.whatsnew{
+    margin: 0 !important;
+}
+div.whatsnew a{
+    padding: 0 !important;
+}
+div.whatsnew a:hover {
+    opacity: 0.7;
+    background: none !important;
+    text-decoration: underline !important;
+}
+/*----------------------------------------------------
+nav  ナビ部分
+----------------------------------------------------*/ 
+#header nav{
+}
+#header .nav{
+    margin: 0 auto;
+    border-right: 1px solid #f1f1f1;
+}
+#header .nav li{   
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    text-align: center;
+    border-left: 1px solid #f1f1f1;
+}
+#header .nav li a{
+    box-sizing: border-box;
+    width: 150px;
+    display: block;
+    height: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#header .nav li a:hover{
+    background: rgba(208, 208, 208, 0.15);
+}
+/*----------------------------------------------------
+　.icn   アイコン設定
+----------------------------------------------------*/ 
+#header .nav li .icn_about:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../img/common/about.svg) no-repeat;
+    background-size: 100%;
+    margin: 0 auto 10px; 
+}
+#header .nav li .icn_works:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../img/common/works.svg) no-repeat;
+    background-size: 100%;
+    margin: 0 auto 10px; 
+}
+#header .nav li .icn_blog:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../img/common/blog.svg) no-repeat;
+    background-size: 100%;
+    margin: 0 auto 10px; 
+}
+#header .nav li .icn_media:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../img/common/media.svg) no-repeat;
+    background-size: 100%;
+    margin: 0 auto 10px; 
+}
+#header .nav li .icn_contact:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../img/common/speak_bk.svg) no-repeat;
+    background-size: 100%;
+    margin: 0 auto 10px; 
+}
+/*----------------------------------------------------
+    #home
+----------------------------------------------------*/	
+
+
+/*----------------------------------------------------
+    #topic_area
+----------------------------------------------------*/
+#topic_area{
+    background: #f1f1f1;
+}
+#topic_area .box_topic{
+    width: 960px;
+    margin: 0 auto;
+    padding: 9px 0;
+    font-size: 1.4rem;
+}
+/*----------------------------------------------------
+    #tuyomi_area
+----------------------------------------------------*/
+#tuyomi_area {
+    width: 960px;
+    margin: 8rem auto;
+}
+#tuyomi_area .tuyomi_copy{
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+#tuyomi_area span{
+    display: block;
+}
+/*----------------------------------------------------
+    #works_area
+----------------------------------------------------*/ 
+#home #works_area{
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 0 6rem;
+    margin-bottom: 0;
+}
+#works_area .wrap_works{
+  width: 960px;
+  margin: 0 auto;
+}
+#works_area .wrap_works .worksbox{
+    width: 300px;
+    text-align: center;
+    margin: 0 3rem 7rem 0;    
+}
+#works_area .wrap_works .worksbox a:hover{
+     text-decoration: underline;
+}
+#works_area .wrap_works .worksbox:nth-child(3n){
+    margin-right: 0;
+}
+#works_area .wrap_works .worksbox .img_works{
+    width: 100%;
+}
+#works_area .wrap_works .worksbox .img_works img{
+    width: 100%;
+    height: 210px;
+    display: block;
+    background: #ccc;
+}
+#works_area .wrap_works .worksbox .name_works{
+    font-size: 1.5rem;
+    margin-top: 2rem;    
+}
+/*----------------------------------------------------
+   #blog_area
+----------------------------------------------------*/ 
+#blog_area{
+    width: 960px;
+    margin: 0 auto;
+}
+.box_blog{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;   
+}
+.blogbox{
+    width: 300px;
+    margin: 0 3rem 5rem 0;    
+}
+.blogbox:nth-child(3n){
+    margin-right: 0;
+}
+.blogbox a:hover{
+     text-decoration: underline;
+}
+.blogbox:last-child{
+    margin-right: 0;
+}
+.blogbox .img_blog{
+    width: 100%;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+.blogbox .img_blog img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    height: auto;
+    display: block;
+    background: #ccc;
+}
+.blogbox .date_blog{
+    margin: 2.5rem 0 0.5rem;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #868686;
+}
+.blogbox .name_blog{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+.blogbox .txt_title_blog{
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #8e8e8e;
+    text-align: justify;
+}
+.blogbox .txt_title_blog{
+    display: none;
+}
+/*----------------------------------------------------
+.blog_pr
+----------------------------------------------------*/
+.blog_pr{
+    border-top: 1px dotted #ccc;
+    margin-top: 5rem;
+}
+.blog_pr h2{
+ padding: 4rem 0 0 !important;   
+}
+.blog_pr .clear_fix{
+    padding: 4rem 1rem 0; 
+}
+.blog_pr .box_l .img_pr{
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 90px;   
+}
+.blog_pr .box_l .img_pr img{
+    width: 100%;
+    height: auto;
+}
+.blog_pr .box_r{
+    width: 550px;
+}
+.blog_pr a{
+    color: #2196F3;
+    text-decoration: underline;
+    font-style: italic;   
+}
+.blog_pr .blog_pr_name{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+/*----------------------------------------------------
+#commentform  ブログの投稿欄カスタマイズ
+----------------------------------------------------*/ 
+#commentform{
+    background: #f7f7f7;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+#author{  
+    width: 100%;
+    height: 40px;
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.comment-form-comment{
+    padding-top: 1rem;
+}
+#comment{
+    width: 100%;
+    border: 1px solid #dfdfdf;    
+    display: block;
+    font-size: 1.6rem; 
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.form-submit{
+    text-align: center;
+    padding: 2rem 0 0;   
+}
+#submit{
+    background: #454545;
+    color: #fff;
+    padding: 0px 60px;
+    height: 60px;
+    font-size: 1.6rem;   
+}
+.logged-in-as{
+    background: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-left: 5px solid #757575;
+    font-size: 1.5rem;
+}
+.logged-in-as a{
+    text-decoration: underline;
+}
+.comment-body{
+    margin-top: 2rem;
+    background: #f7f7f7;
+    padding: 20px;    
+}
+.comment-meta.commentmetadata{
+    text-align: right;
+}
+.comment-body p{
+    font-size: 1.6rem;
+}
+.reply{
+    text-align: center;
+    width: 200px;
+    margin: 3rem auto 0; 
+}
+.comment-reply-link{
+    background: #454545;
+    color: #fff !important;
+    padding: 0px 60px;
+    height: 60px;
+    font-size: 1.6rem;
+    line-height: 60px;
+    display: block;    
+}
+/*----------------------------------------------------
+.blog_info
+----------------------------------------------------*/
+.blog_info{
+    border-top: 1px dotted #ccc;
+    margin-top: 5rem;
+}
+#error_area h2,
+.blog_info h2{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 2.3rem;
+    padding: 5rem 0 2rem;   
+}
+.blog_info .wrap_menu{
+    margin: 5rem 0 0;
+}
+.blog_info .wrap_menu .box_menu{
+    margin-right: 20px;
+    width: 230px;
+}
+.blog_info .wrap_menu .box_menu a:hover,
+.blog_info .wrap_menu .box_menu a img:hover{
+    text-decoration: underline;
+    opacity: 0.7;
+}
+.blog_info .wrap_menu .box_menu:last-child{
+    margin-right: 0;
+}
+.blog_info .wrap_menu .box_menu .img_menu{
+    margin: 0 0 1.5rem;
+}
+.blog_info .wrap_menu .box_menu .ttl_menu{
+    text-align: center;
+    font-weight: bold;
+}
+/*----------------------------------------------------
+#footer
+----------------------------------------------------*/
+#footer{
+    width: 100%;
+    margin: 4rem auto 0;
+}
+/*----------------------------------------------------
+    .contact_area
+----------------------------------------------------*/
+#footer .wrap_contact{
+    width: 100%;
+    background: #f5f5f5;
+    margin: 10rem 0 0;
+}
+#footer .contact_area{
+    width: 960px;
+    margin: 0 auto;
+}
+#footer .contact_area h2{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+#footer .contact_area .txt_ctc{
+    text-align: center;
+    font-size: 1.8rem;
+}
+#footer .contact_area .box_ctc{  
+    padding: 6rem 0 9rem;
+}
+
+#footer .contact_area .txt_entry{
+    font-size: 2rem;
+    display: none;
+    font-weight: bold;
+    line-height: 3rem;
+    margin-right: 94px;
+}
+#footer .contact_area .txt_entry .m{
+    font-size: 1.3rem;
+    font-weight: normal;
+    letter-spacing: 0;
+    display: block;
+}
+#footer .contact_area .btn_tell{
+    margin-right: 20px;
+}
+#footer .contact_area .btn_tell a,
+#footer .contact_area .btn_form a{
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    line-height: 7rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    display: block;
+    overflow: hidden;
+    color: #fff;
+}
+#footer .contact_area .btn_tell{
+    font-size: 2rem;
+    display: none;
+}
+#footer .contact_area .btn_form{
+    width: 100%;
+}
+#footer .contact_area .btn_form a{
+    background: #454545;
+    color: #fff;
+    width: 100%;
+}
+#footer .contact_area .btn_form span,
+#footer .contact_area .btn_tell span{
+    position: relative;
+    padding-left: 40px;   
+}
+#footer .contact_area .btn_tell span:before{
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url(../img/common/telephone_wh.svg) no-repeat;
+    position: absolute;
+    background-size: 28px 28px;
+    top: 50%;
+    left: 0;
+    margin: -14px 0 0;
+}
+#footer .contact_area .btn_form span:before{
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url(../img/common/speak_wh.svg) no-repeat;
+    position: absolute;
+    background-size: 28px 28px;
+    top: 50%;
+    left: 0;
+    margin: -14px 0 0;
+}
+#footer .contact_area .btn_form a:hover{
+    background: #fff;
+    color: #454545;
+}
+#footer .contact_area .btn_form a:hover span:before{
+    color: #454545;
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url(../img/common/speak_bk.svg) no-repeat;
+    position: absolute;
+    background-size: 28px 28px;
+    top: 50%;
+    left: 0;
+    margin: -14px 0 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/*----------------------------------------------------
+    .ftrinfo_area フッター
+----------------------------------------------------*/
+#footer .ftrinfo_area{
+    padding: 5rem 0 1rem;
+    width: 960px;
+    margin: 0 auto;
+}
+#footer .ftrinfo_area .ftr_info_box{
+    width: 30%;
+
+}
+#footer .ftrinfo_area .ftr_info_box .ftr_logo span{
+    display: block;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    color: #8e8e8e;
+}
+#footer .ftrinfo_area .ftr_info_box .txt_add{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+#footer .ftrinfo_area .ftr_info_box .txt_add span{
+    display: block;
+} 
+#footer .ftrinfo_area .ftr_info_box .info_smoll{
+    font-size: 1.3rem;
+    text-align: justify;
+    line-height: 1.9;
+    color: #656565;
+    padding: 1.5rem 0 0;
+}
+#footer .ftrinfo_area .ftr_sns_box{
+    width: 580px;
+}
+#footer .ftrinfo_area .ftr_sns_box .ftr_twr_area{
+    border: 1px solid #e9ebee;
+}
+#footer .ftrinfo_area .sitemap_r{
+    padding: 2rem 0 0;
+}
+#footer .ftrinfo_area .sitemap_r li{
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+#footer .txt_copyright{
+    font-size: 1rem;
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*----------------------------------------------------
+    .ftr_fixbtn 追従ボタン
+----------------------------------------------------*/
+.ftr_fixbtn{
+    display: none;
+}
+/*----------------------------------------------------
+    coopyright
+----------------------------------------------------*/ 
+.txt_copyright{
+	font-size: 1rem;
+	text-align: center;
+	padding-top: 3rem;
+}
+/*===============================================
+画面の横幅が960pxまで（タブレット用）
+===============================================*/
+@media screen and (max-width: 960px) {
+body {
+    padding-top: 70px;
+    font-size: 13px;
+    line-height: 1.8em;
+}
+body.open{
+     position: fixed !important;
+    overflow-y: scroll;   
+}
+section{
+    margin: 0 auto 3rem;
+}
+h1{
+    width: 140px;
+    height: auto;
+}
+h2{
+    font-size: 2rem;
+    padding: 4rem 0;
+}
+h2 span{
+    font-size: 1.5rem;
+}
+.s{
+    font-size: 50%;
+}
+.last{
+    padding: 0 !important;
+}
+.breadcrumbs {
+    padding: 5px 4%;
+    width: 100%;
+    font-size: 1rem;
+}
+.breadcrumbs span[property="name"] {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*----------------------------------------------------
+    #header   ヘッダー
+----------------------------------------------------*/ 
+#header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+#header .logo_area {
+    height: 70px;
+}
+#header .sub_header,
+#header .column_box,
+#header .contac_area,
+#header nav{
+    display: none;
+}
+#header .sp_header{
+    display: block;
+    height: 70px;
+    position: relative;
+    box-sizing: border-box;
+}
+#header .logo_area{
+    padding-bottom: 0;
+}
+#header .logo_area .hdr_logo{
+padding-left: 20px;
+}
+#header .logo_area .hdr_logo span{
+    display: inline-block;
+    font-size: 0.7rem;
+    text-align: left;
+    padding-left: 6px;
+    letter-spacing: 0.1rem;
+}
+#header .sp_hdr_button{
+/*    visibility: hidden;*/
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    right: 20px;
+}
+/*#header .sp_hdr_button a{
+    display: block;
+}*/
+#header .sp_hdr_button a,
+#header .sp_hdr_button *:before,
+#header .sp_hdr_button *:after,
+#header .sp_hdr_button a>span{
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+#header .sp_hdr_button_icon{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    position: relative;   
+}
+#header .sp_hdr_button_icon:before{
+    bottom: -8px;
+}
+#header .sp_hdr_button_icon:after{
+     bottom: -16px;   
+}
+#header .sp_hdr_button_icon:before,
+#header .sp_hdr_button_icon:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    position: absolute;
+}
+#header .sp_hdr_button_txt{
+    display: block;
+    font-size: 8px;
+    font-size: .8rem;
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-top: 26px;   
+}
+body.open #header .sp_hdr_button_icon{
+    background-color: transparent;
+}
+body.open #header .sp_hdr_button_icon:before{
+-webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); 
+}
+body.open #header .sp_hdr_button_icon:after{
+    bottom: -8px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+body.open #header .sp_hdr_button_txt span{
+    display: none;
+}
+body.open #header .sp_hdr_button_txt:after{
+    display: block;
+    content: "Close"; 
+}
+#header .hdr_copy{
+    display: none;
+}
+#header .hdr_sns {
+    float: none;
+    position: absolute;
+    right: 70px;
+    top: 10px;
+}
+#header .hdr_sns li{
+    width: 20px;
+    height: 20px;
+}
+#header .hdr_sns li:last-child {
+    margin-left: 10px;
+}
+/*----------------------------------------------------
+nav  ナビ部分
+----------------------------------------------------*/ 
+body.open #header .sp_hdr_menu{
+    display: block;
+    overflow-y: scroll;
+/*    opacity: 1;*/
+    width: 100% !important;
+    height: calc(100vh - 70px);
+    margin: 0;
+    padding: 0;
+    background: #000;
+    background: rgba(255,255,255,0.95);
+    position: fixed;
+    left: 0;
+    top: 70px;
+    z-index: 10000;
+/*    visibility: hidden;*/
+    overflow: hidden;
+/*    opacity: 0;*/
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    -webkit-overflow-scrolling: touch;
+}
+body.open #header .sp_hdr_menu .sp_copy{
+    width: 100%;
+    padding: 30px 6%;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    line-height: 2.4em;
+    border-top: 1px solid #ccc;
+}
+body.open #header .sp_menu {
+    border-top: 1px solid #ccc;
+}
+body.open #header .sp_hdr_menu li{
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+body.open #header .sp_hdr_menu li a{
+    height: 5rem;
+    line-height: 50px;
+    display: block;
+}
+body.open #header .sp_hdr_menu li a:nth-child(1n+1){
+    border-right: 1px solid #ccc;  
+}
+body.open #header .sp_hdr_menu .sp_contac_area{
+    width: 100%;
+    padding: 20px 6% 0;
+    box-sizing:border-box;
+}
+body.open #header .sp_hdr_menu .sp_contac_area a{
+    border: 1px solid #454545;
+    font-size: 1.3rem;
+    line-height: 6rem;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 6px;   
+}
+body.open #header .sp_hdr_menu .sp_contac_area a:hover{
+    background: #454545;
+    color: #fff;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;   
+}
+body.open #header .sp_hdr_menu .sp_contac_area a span{
+    position: relative;
+    padding-left: 40px;    
+}
+body.open #header .sp_hdr_menu .sp_contac_area a span:before{
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url(../img/common/speak_bk.svg) no-repeat;
+    position: absolute;
+    background-size: 28px 28px;
+    top: 50%;
+    left: 0;
+    margin: -14px 0 0;  
+}
+body.open #header .sp_hdr_menu .sp_contac_area a:hover span:before{
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url(../img/common/speak_wh.svg) no-repeat;
+    position: absolute;
+    background-size: 28px 28px;
+    top: 50%;
+    left: 0;
+    margin: -14px 0 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;   
+}
+/*----------------------------------------------------
+.error_area エラーページ設定
+----------------------------------------------------*/
+#error_area{
+    width: 100%;
+    margin: 0 auto 4rem;
+    padding: 0 6%;
+    box-sizing:border-box;  
+}
+/*----------------------------------------------------
+    #topic_area
+----------------------------------------------------*/
+#topic_area .box_topic{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+/*----------------------------------------------------
+    #tuyomi_area
+----------------------------------------------------*/
+#tuyomi_area {
+    width: 100%;
+    margin: 3rem auto;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+#tuyomi_area .tuyomi_copy {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    line-height: 1.6;
+}
+#tuyomi_area span{
+    display: inline;
+}
+/*----------------------------------------------------
+    #works_area
+----------------------------------------------------*/
+#home #works_area {
+    padding: 0 0 4rem;
+} 
+#works_area .wrap_works{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 6%;
+  box-sizing: border-box;
+}
+#works_area .wrap_works .worksbox {
+    width: 47%;
+    text-align: center;
+    margin: 0 6% 6rem 0;
+}
+#works_area .wrap_works .worksbox:nth-of-type(3n){
+    margin-right: 6%;
+}
+#works_area .wrap_works .worksbox:nth-child(2n){
+    margin-right: 0;
+}
+#works_area .wrap_works .worksbox:nth-of-type(3){
+    margin-right: 6%;
+}
+#works_area .wrap_works .worksbox .img_works{
+    width: 100%;
+}
+#works_area .wrap_works .worksbox .img_works img{
+    width: 100%;
+    height: auto;
+}
+#works_area .wrap_works .worksbox .name_works{
+    font-size: 1.4rem;
+}
+#works_area .wrap_works .worksbox .name_works{
+    margin-top: 1.5rem;
+}
+/*----------------------------------------------------
+#blog_area
+----------------------------------------------------*/
+#blog_area{
+    width: 100%;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+.blogbox {
+    width: 44%;
+    margin: 0 3% 6rem;
+}
+.blogbox:nth-child(3n){
+    margin: 0 3% 6rem;
+}
+/*----------------------------------------------------
+.blog_info
+----------------------------------------------------*/
+.blog_info{
+    margin-top: 4rem;
+}
+#error_area h2,
+.blog_info h2{
+    font-size: 1.8rem;
+    padding: 3rem 0 1rem;
+}
+.blog_info .wrap_menu{
+    margin: 3rem 0 0;
+}
+.blog_info .wrap_menu .box_menu{
+    margin-right: 2%;
+    width: 32%;
+}
+.blog_info .wrap_menu .box_menu img{
+    width: 100%;
+    height: auto;
+}
+.blog_info .wrap_menu .box_menu .img_menu{
+    margin: 0 0 1rem;
+}
+/*----------------------------------------------------
+    .contact_area
+----------------------------------------------------*/
+#footer .wrap_contact{
+    margin: 5rem 0 0;
+}
+#footer .contact_area{
+    width: 100%;
+    padding:0 6%;
+    box-sizing: border-box;
+}
+#footer .contact_area h2{
+    padding-bottom: 2rem;
+}
+#footer .contact_area .txt_ctc{
+    font-size: 1.3rem;
+}
+#footer .contact_area .box_ctc{  
+    padding: 3rem 0 5rem;
+}
+#footer .contact_area .btn_form{
+    width: 100%;
+}
+#footer .contact_area .btn_form a{
+    width: 100%;
+}
+/*----------------------------------------------------
+    .ftrinfo_area フッター
+----------------------------------------------------*/
+#footer .ftrinfo_area{
+    padding: 4rem 6% 2rem;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+#footer .ftrinfo_area .ftr_sns_box {
+    margin: 0 auto;
+    float: none;
+}
+#footer .ftrinfo_area .ftr_info_box {
+    width: 100%;
+    float: none;
+}
+#footer .ftrinfo_area .ftr_info_box .ftr_logo{
+    font-size: 3rem;
+    text-align: center;
+    padding: 4rem 0 0;
+    line-height: 2.5rem;
+    display: inherit;
+}
+#footer .ftrinfo_area .ftr_info_box .ftr_logo span{
+    text-align: center;
+}
+#footer .ftrinfo_area .info_smoll{
+    font-size: 1rem;
+    width: 100%;
+    float: none;
+    line-height: 1.9em;
+}
+#footer .ftrinfo_area .add_smoll{
+    font-size: 1rem;
+    line-height: 1.9em;
+}
+#footer .ftrinfo_area .add_smoll .txt_add span{
+    display: block;
+    text-align: center;
+}
+#footer .ftrinfo_area .add_smoll .sitemap_s_fter{
+display: none;
+}
+#footer .txt_copyright{
+    font-size: 0.8rem;
+    width: 100%;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+/*----------------------------------------------------
+    .ftr_fixbtn 追従ボタン
+----------------------------------------------------*/
+.ftr_fixbtn{
+    z-index: 100;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.ftr_fixbtn a{  
+    height: 6rem;
+    color: #fff;
+    position: relative;
+    display: block;
+    width: 100%;
+    line-height: 6rem;
+    text-align: center;
+    background: #811c47;
+}
+.ftr_fixbtn a:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 0 1px 0 1px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    -webkit-transform: translate(-50%, -110%) rotate(-45deg);
+    transform: translate(-50%, -110%) rotate(-45deg);   
+}
+.ftr_fixbtn a span{
+    position: relative;
+    padding-left: 40px;
+}
+.ftr_fixbtn a span:before{
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url(../img/common/speak_wh.svg) no-repeat;
+    position: absolute;
+    background-size: 28px 28px;
+    top: 50%;
+    left: 0;
+    margin: -14px 0 0;    
+}
+}
+/*===============================================
+画面の横幅が740pxまで（スマホ用）
+===============================================*/
+@media screen and (max-width: 740px) {
+#homepage{
+	width: 100%;
+	box-sizing:border-box;
+}
+h2 {
+    padding: 6rem 0;
+    font-size: 2.2rem;
+}
+/*----------------------------------------------------
+　#fv-loading-wrap ロゴのローディングアクション
+----------------------------------------------------*/
+#fv_logo_ruby .icn_logo_ruby {
+    width: 180px;
+    margin-top: -40px;
+}
+/*----------------------------------------------------
+    #works_area
+----------------------------------------------------*/
+#works_area .wrap_works .worksbox {
+    margin: 0 6% 4rem 0;
+}
+#works_area .wrap_works .worksbox .name_works {
+    font-size: 1.2rem;
+    line-height: 1.7em;
+}
+/*----------------------------------------------------
+    .blogbox
+----------------------------------------------------*/
+.blogbox{
+    width: 100%;
+    margin: 0 0 5rem 0;
+    padding: 0 6%;
+    box-sizing: border-box;  
+}
+.blogbox:nth-child(3n) {
+    margin: 0 0 6rem;
+}
+.blogbox .img_blog{
+    width: 100%;
+}
+.blogbox .date_blog{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+/*----------------------------------------------------
+    .blog_pr
+----------------------------------------------------*/
+.blog_pr .box_l,
+.blog_pr .box_r{
+    float: none;
+}
+.blog_pr .box_l .img_pr{
+    margin: 0 auto; 
+}
+.blog_pr .box_r{
+    width: 100%;
+}
+.blog_pr .blog_pr_name{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 0; 
+}
+.btn_contact{
+	width: 96%;
+	margin: 3rem auto 0;
+}
+#logo_box{
+    width: 100%;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+}
+/*===============================================
+画面の横幅が700pxまで（snsのレイアウト変更のみ）
+===============================================*/
+@media screen and (max-width: 680px){
+#footer .ftrinfo_area .ftr_sns_box {
+    width: 100%;
+}
+#footer .ftrinfo_area .ftr_sns_box .ftr_fb_area,
+#footer .ftrinfo_area .ftr_sns_box .ftr_twr_area{
+    float: none;
+    margin: 0 auto;
+    width: 280px;
+}
+#footer .ftrinfo_area .ftr_sns_box .ftr_fb_area{
+    margin: 0 auto 2rem; 
+}  
+}
+/*===============================================
+画面の横幅が480pxまで（スマホ用）
+===============================================*/
+@media screen and (max-width: 480px){
+.wp-embed-featured-image.square {
+    max-width: 100%;
+}
+.wp-embed-featured-image img {
+    width: 100%;
+}
+.wp-pagenavi span, .wp-pagenavi a {
+    margin: 0 2px;
+    font-size: 1.3rem;
+    padding: 0.4em 0.6em;
+}
+}
+/*===============================================
+画面の横幅が320pxまで（スマホ用）
+===============================================*/
+@media screen and (max-width: 320px) {
+#works_area .wrap_works .worksbox .name_works {
+    font-size: 1rem;
+}
+.breadcrumbs {
+    font-size: 0.8rem;
+}
+/*----------------------------------------------------
+.blog_info
+----------------------------------------------------*/
+.blog_info .wrap_menu{
+    margin: 3rem 0 0;
+}
+.blog_info .wrap_menu .box_menu{
+    margin: 0 auto 2rem !important;
+    width: 100%;
+}
+.blog_info .wrap_menu .box_menu .ttl_menu{
+    font-size: 1.3rem;
+}
+body.open #header .sp_hdr_menu .sp_contac_area {
+    padding: 10px 6% 0;
+}
+}
+
+/*======================================
+
+	hack - 各種cssハック - for IE7
+
+=======================================*/
+*:first-child+html {}
+
+
+/*======================================
+
+	hack - 各種cssハック - for IE6
+
+=======================================*/
+* html {}
+

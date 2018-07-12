@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+
+ file name  :common.css
+ author	 :RUBYDESIGN.
+style info  :設定　ハックは最下部に記述
+=================================================================== */
+@import url("default.css");
+@import url("common.css");
+@import url("loaders.min.css");
+@import url("homepage.css");
+@import url("about.css");
+@import url("works.css");
+@import url("blog_detail.css");
+@import url("contact.css");
+@import url("privacy.css");
+

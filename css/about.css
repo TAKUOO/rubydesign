@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+
+ file name  :about.css
+ author     :RUBY DESIGN.
+style info  :設定　ハックは最下部に記述
+=================================================================== */
+#about #profile_area .area_profile{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;   
+}
+#about #concept_area,
+#about #about_area,
+#about #profile_area{
+ width:800px;
+ font-family: 'Didact Gothic', sans-serif; 
+}
+/*----------------------------------------------------
+ #concept_area
+----------------------------------------------------*/	
+ #about #concept_area .copy_cpt{
+    font-size: 3rem;
+    line-height: 1.7em;
+ }
+  #about #concept_area .txt_concept{
+    padding-top: 5rem;
+  }
+/*----------------------------------------------------
+    #about_area
+----------------------------------------------------*/ 
+ #about #about_area table{
+    width: 100%;
+    font-size: 1.4rem
+}
+ #about #about_area table th{
+    width: 20%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+    font-weight: normal;
+    vertical-align: top;
+    padding: 22px 0 18px;
+    text-align: left;
+}
+ #about #about_area table td{
+    width: 80%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 22px 0 18px;
+    padding-left: 20px;
+}
+/*----------------------------------------------------
+  #profile_area
+----------------------------------------------------*/ 
+ #about #profile_area .area_profile .icn_fb,
+ #about #profile_area .area_profile .icn_twr,
+ #about #profile_area .area_profile .icn_isnta{
+    width: 28px;
+    height: 28px;
+ }
+#about #profile_area .area_profile span{
+    margin-right: 20px;
+}
+#about #profile_area .area_profile .name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+#about #profile_area .area_profile .icn_fb,
+#about #profile_area .area_profile .icn_twr{
+     margin-right: 10px;   
+}
+ #about #profile_area .area_profile .icn_isnta{
+    margin-right: 0;
+ }
+#about #profile_area .area_profile img{
+    width: 100%;
+    height: auto;
+}
+#about #profile_area .date_profile{
+    padding-top: 2rem;
+    font-size: 1.3rem;
+}
+#about #profile_area .txt_profile{
+    padding-top: 3rem;
+}
+#about .box_profile h3{
+    padding: 3rem 0 1rem;
+    font-size: 1.7rem;
+}
+.blog_btn{
+    margin-top: -10px;
+}
+.blog_btn a{
+    border: 1px solid #454545;
+    border-radius: 4px;
+    padding: 10px 20px;
+    min-width: 200px;
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.blog_btn a span{
+    position: relative;
+    padding-left: 30px;   
+}
+.blog_btn a span:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(../img/common/link_bk.svg) no-repeat;
+    position: absolute;
+    background-size: 16px 16px;
+    top: 50%;
+    left: 0;
+    margin: -8px 0 0;    
+}
+.blog_btn a:hover{
+    border: 1px solid #454545;
+    background: #454545;
+    color: #fff;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+.blog_btn a:hover span:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(../img/common/link_wht.svg) no-repeat;
+    position: absolute;
+    background-size: 16px 16px;
+    top: 50%;
+    left: 0;
+    margin: -8px 0 0;     
+}
+/*----------------------------------------------------
+    #policy_area
+----------------------------------------------------*/ 
+
+/*===============================================
+画面の横幅が640pxまで（スマホ用）
+===============================================*/
+@media screen and (max-width: 800px) {
+#about #concept_area,
+#about #about_area,
+#about #profile_area{
+ width: 100%;
+ padding: 0 6%;
+ box-sizing:border-box; 
+}
+/*----------------------------------------------------
+  #profile_area
+----------------------------------------------------*/ 
+ #about #profile_area .area_profile .icn_fb,
+ #about #profile_area .area_profile .icn_twr,
+ #about #profile_area .area_profile .icn_isnta{
+    width: 24px;
+    height: 24px;
+ }
+#about #profile_area .area_profile span{
+    margin-right: 10px;
+}
+#about #profile_area .area_profile .name{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#about #profile_area .date_profile{
+    font-size: 1rem;
+}
+#about #profile_area .txt_profile{
+    padding-top: 2rem;
+}
+#about .box_profile h3{
+    padding: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+#about #profile_area .area_profile{
+    float: none;
+}
+.blog_btn{
+    margin-top: 2rem;
+    float: none;
+}
+.blog_btn a{
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing:border-box;
+}
+.blog_btn a span{
+    position: relative;
+    padding-left: 30px;   
+}
+.blog_btn a span:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(../img/common/link_bk.svg) no-repeat;
+    position: absolute;
+    background-size: 16px 16px;
+    top: 50%;
+    left: 0;
+    margin: -8px 0 0;    
+}
+.blog_btn a:hover{
+    border: 1px solid #454545;
+    background: #454545;
+    color: #fff;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+.blog_btn a:hover span:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(../img/common/link_wht.svg) no-repeat;
+    position: absolute;
+    background-size: 16px 16px;
+    top: 50%;
+    left: 0;
+    margin: -8px 0 0;     
+}
+/*----------------------------------------------------
+ #concept_area
+----------------------------------------------------*/  
+ #about #concept_area .copy_cpt{
+    font-size: 2rem;
+ }
+  #about #concept_area .txt_concept{
+    padding-top: 2rem;
+  }
+
+}
+/*===============================================
+画面の横幅が320pxまで（スマホ用）
+===============================================*/
+@media screen and (max-width: 320px) {
+/*----------------------------------------------------
+  #profile_area
+----------------------------------------------------*/ 
+ #about #profile_area .area_profile .icn_fb,
+ #about #profile_area .area_profile .icn_twr,
+ #about #profile_area .area_profile .icn_isnta{
+    width: 18px;
+    height: 18px;
+ }
+#about #profile_area .area_profile span{
+    margin-right: 5px;
+}
+#about #profile_area .area_profile .kana{
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+}
+
+/*======================================
+
+	hack - 各種cssハック - for IE7
+
+=======================================*/
+*:first-child+html {}
+
+
+/*======================================
+
+	hack - 各種cssハック - for IE6
+
+=======================================*/
+* html {}
+
