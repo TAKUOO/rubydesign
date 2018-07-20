@@ -11,6 +11,11 @@ style info  :設定　ハックは最下部に記述
  margin: 0 auto 6rem;
  font-family: 'Didact Gothic', sans-serif; 
 }
+#blog_detail #area_blog_detail iframe {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto
+}
 #blog_detail #area_blog_detail h2{
     padding: 6rem 0 1rem;
 }

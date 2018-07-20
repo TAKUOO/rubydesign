@@ -9,8 +9,8 @@
 <title><?php wp_title(' - ',true,'right'); ?></title>
 <?php endif; ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="keywords" content="福岡,デザイン事務所,ブランディング,グラフィックデザイン,WEBデザイン・サービス開発,運営"/>
-<meta name="description" content="福岡で活躍するデザイナーと繋がる場。webサイトやサービス設計などに携わるUIデザイナー、ブランディングや紙面媒体などを手がけるグラフィックデザイナーが在籍。デザイナーの支援を中心に、企業とデザイナーをつなぐ相談窓口、メディア運営、イベント、ワークショップなども定期的に開催しています。" />
+<meta name="keywords" content="UIデザイン,WEBデザイン,webサービスデザイン"/>
+<meta name="description" content="デザイナーとつくる、繋がる、企画する。フリーのUI/UXデザイナー、グラフィックデザイナーなどwebサービス開発に必要なメンバーが在籍する参加型のデザインチーム。" />
 <meta name="ROBOTS" content="INDEX, FOLLOW">
 <meta name="google-site-verification" content="r3ej5W3S5B-VlOkykzenzjQ0zdwuDwr4zw2wepMZYDY" />
 <meta http-equiv="content-style-type" content="text/css" />
