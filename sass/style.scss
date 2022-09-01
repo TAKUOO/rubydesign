@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+ theme Name: rubydesign2020
+ Author: rubydesign
+ file name: default.css
+ style info: リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+@import 
+    "default",
+    "common",
+    "animate",
+    "base",
+    "header",
+    "footer",
+    "aside",
+    "mainVisual",
+    "video",
+    "page",
+    "home",
+    "single"
+    ;

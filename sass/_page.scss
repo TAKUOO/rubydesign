@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+file name : page.scss
+style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+$pc: 1024px; // PC
+$tab: 750px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+	@media (max-width: ($pc)) {
+	  @content;
+	}
+  }
+  @mixin tab {
+	@media (max-width: ($tab)) {
+	  @content;
+	}
+  }
+  @mixin sp {
+	@media (max-width: ($sp)) {
+	  @content;
+	}
+  }
+.page{
+    h1{
+        font-size: 3rem;
+        margin-bottom: 30px;
+        @include tab{
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+    }
+    h2{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .text{
+        margin-bottom: 30px;
+    }
+    .contents_Inner{
+        max-width: 620px;
+        .form_box{
+            padding: 50px 0;
+        }
+        .form_area{
+            padding-bottom: 50px;
+            @include tab{
+                padding-bottom: 30px;
+            }
+            .box{
+                margin-bottom: 20px;
+            }
+            .contact_label{
+                display: block;
+                font-size: 1.6rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                &:after{
+                    content: "必須";
+                    color: #ffffff;
+                    font-size: 1rem;
+                    margin-left: 4px;
+                    background: #c10002;
+                    border-radius: 4px;
+                    padding: 2px 4px;                
+                }
+            }
+            #company{
+                &:after{
+                    display: none;
+                }
+            }
+            .c-form-input-text {
+                width: 100%;
+                font-size: 1.8rem;
+                padding: 12px 10px 10px 10px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 4px;
+            }
+            .c-form-select-box{
+                font-size: 100%;
+                 position: relative;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                padding: 12px 10px 8px 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .c-form-text-area{
+                width: 100%;
+                font-size: 1.8rem;
+                box-sizing: border-box;
+                padding: 12px 10px 8px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(204, 204, 204);
+                border-image: initial;
+            }
+            .wpcf7-list-item {
+                margin: 0 1rem 0 0;
+            }
+        }
+        .cv_btn{
+            max-width: 340px;
+            margin: 0 auto;
+            .wpcf7 input[type="submit"],
+            input.wpcf7-submit{
+                width: 100%;
+                font-size: 1.8rem;
+                border-radius: 4px !important;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                display: block !important;
+                color: #fff;
+                background-color: #454545 !important;
+                background: #454545 !important;
+                text-align: center;
+                border: none;
+                height: 60px;
+                line-height: 60px;
+                -webkit-appearance: button;
+            }
+            .soushinbtn:hover{
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        }
+    }
+    /*----------------------------------------------------
+    #error masseage
+    ----------------------------------------------------*/  
+    .wpcf7-not-valid-tip {
+        color: #f00;
+        font-size: 1.3rem !important;
+    }
+    .wpcf7-validation-errors,
+    .wpcf7-acceptance-missing {
+        border: none !important;
+        text-align: center;
+        color: #ff0002;
+        background: #fdeeee;
+        font-size: 1.3rem;
+        padding: 6px 0 !important;
+    }
+    .wpcf7-mail-sent-ok,
+    .wpcf7-response-output{
+        display: none !important;
+    }
+}
+#contact{
+    footer{
+        display: none;
+    }
+}
+#about,
+#guide{
+    .contents_Inner{
+        h2{
+            font-size: 2.4rem;
+            margin: 40px 0 24px;
+            padding: 0;
+        }
+        h3{
+            font-size: 1.8rem;
+            margin: 30px 0;
+        }
+        h4{
+            font-size: 1.8rem;
+            margin: 20px 0 10px;
+        }
+        .contents_block{
+            border-bottom: 1px solid #ddd;
+        }
+        p{
+            margin: 20px 0;
+            letter-spacing: 0;
+            font-size: 1.8rem;
+        }
+        em{
+            opacity: 0.7;
+            font-size: 1.3rem;
+            display: block;
+            width: 100%;
+        }
+        table{
+            width:100%;
+        }
+        table th{
+            width: 20%;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            white-space: nowrap;
+            vertical-align: top;
+            padding: 15px 0;
+            text-align: left;
+        }
+        table td{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+            box-sizing: border-box;
+            padding: 15px 0;
+            padding-left: 20px;
+        }
+    }
+}
+#guide{
+    h4{
+        &:before{
+            content: "Q";
+            font-weight:700;
+            margin-right:6px;
+            font-size: 2rem;
+        }
+    }
+    // .ufaq-faq-body{
+    //     &:before{
+    //         content: "A";
+    //         font-weight:700;
+    //         margin-right:6px;
+    //         font-size: 2rem;
+    //     } 
+    // }
+}

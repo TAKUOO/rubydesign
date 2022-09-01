@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+file name : header.scss
+style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+$pc: 1024px; // PC
+$tab: 750px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+	@media (max-width: ($pc)) {
+	  @content;
+	}
+  }
+  @mixin tab {
+	@media (max-width: ($tab)) {
+	  @content;
+	}
+  }
+  @mixin sp {
+	@media (max-width: ($sp)) {
+	  @content;
+	}
+  }
+header{
+    width: 100%;
+    height: 100px;
+    margin: 100px auto 0;
+    position: absolute;
+    top: -100px;
+    line-height: 1;
+	z-index: 999;
+	@include tab{
+		height: 60px;
+		margin: 60px auto 0;
+		top: -60px;
+	}
+}
+.fixed{
+	position: fixed;
+	margin-top: 0;
+	top: 0;
+	background: #fff;
+	transition: top 0.65s ease-in;
+	-webkit-transition: top 0.65s ease-in;
+	-moz-transition: top 0.65s ease-in;
+  }
+.header_inner{
+	height: 100px;
+	margin: 0 4%;
+	position: relative;
+	@include tab{
+		height: 60px;
+	}
+	.gloval_navigation{
+		.navi_buttonArea{
+			display: none;
+			@include tab{
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 10px;
+			}
+		}
+		.navi_icon{
+			cursor: pointer;
+			width: 38px;
+			height: 38px;
+			padding: 10px;
+			box-sizing: border-box;
+			border-radius: 50%;
+			background: #ff1880;
+			background: linear-gradient(90deg, #ff1880 0%, #d4005b 100%);
+			box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.1);
+			&:before{
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: "\f0c9";
+				font-size: 1.6rem;
+				color: #fff;
+				text-align: center;
+				display: block;
+			}
+		}
+		p{
+			&:first-child{
+				font-size: 1.2rem;
+				font-weight: 700;
+				line-height: 1;
+			}
+			&:last-child{
+				font-size: 1rem;
+			}
+		}
+	}
+	.header_logo{
+		margin-right: 30px;
+		margin-left: -1.4%;
+		width: 180px;
+		z-index: 999;
+		@include tab{
+			width: 140px;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.navigation_inner{
+		@include tab{
+			display: none;
+		}
+		nav{
+			font-weight: 700;
+			font-size: 1.4rem;
+			li{
+				margin-left: 20px;
+				&:first-child{
+					margin: 0;
+				}
+			}
+		}
+		.sub_navgation{
+			position: absolute;
+			right: 0;
+			.snsArea li{
+				margin-left: 20px;
+			}
+			.contact{
+				margin-left: 20px;
+			  a{
+				width: 120px;
+				font-size: 1.2rem;
+				text-align: center;
+				font-weight: 700;
+				background: #E91E63;
+				color: #fff;
+			  }
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------
+    .gloval_navigation_contents 
+----------------------------------------------------*/
+.gloval_navigation_contents{
+	display: none;
+}
+.open{
+	.gloval_navigation_contents{
+		display: block;
+		overflow-y: scroll;
+		width: 100% !important;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background: #fff;
+		z-index: 2;
+		overflow: hidden;
+		-webkit-transition: all 300ms ease-out;
+		-moz-transition: all 300ms ease-out;
+		-ms-transition: all 300ms ease-out;
+		-o-transition: all 300ms ease-out;
+		transition: all 300ms ease-out;
+		-webkit-overflow-scrolling: touch;
+		#navi_header{
+			position: relative;
+			height: 60px;
+			margin: 0 4%;
+			.navi_icon{
+				cursor: pointer;
+				&:before{
+					font-family: "Font Awesome 5 Free";
+					font-weight: 900;
+					content: "\f00d";
+					font-size: 1.6rem;
+					color: #fff;
+					text-align: center;
+					display: block;
+				}
+			}
+		}
+		.menuOpen_contents{
+			height: calc(100% - 60px);
+			overflow-y: scroll;
+			.menuOpen_contents_container{
+				width: 100%;
+				box-sizing: border-box;
+			}
+			.searchArea{
+				padding: 0 20px;
+				box-sizing: border-box;
+				height: auto;
+				.container-2{
+					width: 100%;
+					position: relative;
+					.seachform{
+						width: 100%;
+    					position: relative;
+					}
+					.icon{
+						position: absolute;
+						height: 100%;
+						z-index: 1;
+						right: 0;
+						top: 0;
+						background: #E91E63;
+						color: #f5f5f5;	
+						height: 34px;				
+					}
+					#search{
+						font-size: 1.6rem;
+						border-radius: 4px;
+						padding: 10px;
+						position: relative;
+						width: calc(100% - 44px);
+						box-sizing: border-box;
+						height: auto;
+					}
+				}
+			}
+			#menuArea{
+				background: #222;
+				color: #fff;
+				overflow-y: scroll;
+				a{
+					color: #fff;
+					padding: 20px;
+					display: block;
+					width: 100%;
+					border-top: 1px solid #4a4a4a;
+					box-sizing: border-box;
+					i{
+						margin-right: 6px;
+						width: 20px;
+					}
+				}	
+				h3{
+					padding: 20px;
+					box-sizing: border-box;
+				}
+				#navi_menu{
+					li{
+						width: 100%;
+					}
+				}
+				.searchArea{
+					width: 100%;
+				}
+			}
+		}	
+	}
+}
+
+/*----------------------------------------------------
+    #searchArea 
+----------------------------------------------------*/
+.searchArea {
+	width: 240px;
+	height: 34px;
+	.icon {
+		margin: 0;
+		font-size: 1.6rem;
+		border: none;
+		width: 34px;
+		height: 34px;
+		border-radius: 17px;
+		text-align: center;
+	}
+	button{
+		cursor: pointer;
+	}
+  }
+  .container-2 {
+	width: 240px;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	cursor: pointer;
+  	#search {
+	  width: 34px;
+	  height: 34px;
+	  font-size: 1.4rem;
+	  border: none;
+	  border-radius: 100px;
+	  padding: 0 0 0 17px;
+	  -webkit-transition: width .55s ease;
+	  -moz-transition: width .55s ease;
+	  -ms-transition: width .55s ease;
+	  -o-transition: width .55s ease;
+	  transition: width .55s ease;
+	  right: 0;
+	  top: 50%;
+	  position: absolute;
+	}
+  	.icon {
+	  position: absolute;
+	  z-index: 1;
+	  right: 0;
+	  top: 0;
+	}
+  
+	input#search {
+	  &:focus,
+	   &:active {
+		outline: none;
+		width: 240px;
+		background: #f5f5f5;
+	  }
+	}
+	&:hover {
+	  input#search {
+		width: 240px;
+		background: #f5f5f5;
+	  }
+  
+	  .icon {
+		color: #93a2ad;
+	  }
+	}
+  }
+  input:-internal-autofill-selected {
+	background: #fff;
+  }

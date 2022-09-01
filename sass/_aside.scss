@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+file name : aside.scss
+style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+$pc: 1024px; // PC
+$tab: 750px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+	@media (max-width: ($pc)) {
+	  @content;
+	}
+  }
+  @mixin tab {
+	@media (max-width: ($tab)) {
+	  @content;
+	}
+  }
+  @mixin sp {
+	@media (max-width: ($sp)) {
+	  @content;
+	}
+  }
+
+aside{
+	.banner-image{
+		width:100%;
+		height: auto;
+		padding-bottom: 24px;
+	}
+	h3{
+		margin-bottom: 20px;
+		font-size: 2rem;
+		@include tab{
+			font-size: 1.8rem;
+		}
+	}
+	.sideContent_Area{
+		padding-top: 40px;
+		&:nth-of-type(1){
+			padding-top: 0;
+		}
+		@include sp{
+			padding: 0 4%;
+			margin-top: 32px;
+		}
+	}
+	#categories-3{
+		@include sp{
+			display: none;
+		}
+		li{
+			border-bottom: 1px solid #ddd;
+			margin-top: 16px;
+			padding-bottom: 16px;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+file name : footer.scss
+style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+$pc: 1024px; // PC
+$tab: 750px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+	@media (max-width: ($pc)) {
+	  @content;
+	}
+  }
+  @mixin tab {
+	@media (max-width: ($tab)) {
+	  @content;
+	}
+  }
+  @mixin sp {
+	@media (max-width: ($sp)) {
+	  @content;
+	}
+  }
+
+footer{
+	#projectArea{
+		position: relative;
+		a{
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	/*----------------------------------------------------
+    #contactArea
+	----------------------------------------------------*/
+	#contactArea{
+		padding: 5% 2%;
+		position: relative;
+		background-size: 200% 100%;
+		background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
+		background-image: linear-gradient(to right, transparent 50%, #000 50%);
+		-webkit-transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s, color 0.5s ease 0s, background-color 0.5s ease;
+		transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s, color 0.5s ease 0s, background-color 0.5s ease;
+		&:hover{
+			background-color: #000;
+			background-position: -100% 100%;
+		}
+		@include tab{
+			padding: 10% 4%;
+		}
+		a{
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.tab{
+			.iconArrow{
+				border: 1px solid #fff;	
+			}
+		}
+	}
+	.sitemap{
+		margin: 2%;
+		@include tab{
+			margin: 4%;
+		}
+		nav{
+			@include tab{
+			width: 100%;
+				ul{
+					justify-content: center;
+				}
+			}
+			@include sp{
+				margin-bottom: 30px;
+			}
+		}
+		.snsArea{
+			margin-left: auto;
+			@include tab{
+				margin: 0 auto 30px;
+			}
+		}
+		.copyright{
+			font-size: 1.2rem;
+			margin-left: 20px;
+			opacity: 0.5;
+			@include tab{
+				width: 100%;
+				margin: 0;
+				text-align: center;
+			}
+		}
+		li{
+			margin-left: 20px;
+			font-size: 1.3rem;
+			&:first-child{
+				margin: 0;
+			}
+		}
+	}
+}

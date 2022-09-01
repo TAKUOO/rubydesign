@@ -1,0 +1,343 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+file name : single.scss
+style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+$pc: 1024px; // PC
+$tab: 750px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+	@media (max-width: ($pc)) {
+	  @content;
+	}
+  }
+  @mixin tab {
+	@media (max-width: ($tab)) {
+	  @content;
+	}
+  }
+  @mixin sp {
+	@media (max-width: ($sp)) {
+	  @content;
+	}
+  }
+  
+  .single {
+	  @include tab{
+		  padding-top: 60px;
+	  }
+
+	  .eyecath{
+		  &.--main{
+			  aspect-ratio: 16/9;
+			  overflow: hidden;
+			  border-radius: 8px;
+			  position: relative;
+			  margin-bottom: 12px;
+			  @include sp{
+				  border-radius: 0;
+			  }
+			  img{
+				  width: 100%;
+				  max-width: 100%;
+				  position: absolute;
+				  top: 50%;
+				  left: 50%;
+				  transform: translate(-50%,-50%);
+				  height: 100%;
+				  -o-object-fit: cover;
+				  object-fit: cover;
+				  display: block;
+				  margin: 0;
+			  }
+		  }
+	  }
+
+	  .card_infoArea{
+		@include tab{
+			padding: 0 4%;
+			h1{
+				font-size: 2.2rem;
+			}
+		}
+	  }
+
+	  .content-inner{
+		  height: auto !important;
+		  max-width: 1240px;
+		  display: grid;
+		  grid-template-columns: 66% 1fr;
+		  gap: 4%;
+		  margin: 24px auto 0;
+		  @include sp{
+			  display: block;
+			  margin: 0;
+		  }
+	  }
+	  article{
+		  h1{
+			font-size: 3rem;
+			margin-bottom: 8px !important;
+		  }
+		  .card_date{
+			font-size: 1.4rem;
+			opacity: 0.6;
+		  }
+		  .eyecath,
+		  .contents_Area{
+			img{
+				width: 100%;
+				display: block;
+				height: auto;
+				margin: 36px auto;
+				border: 1px solid #e8e8e8;
+			}
+		  }
+		  .eyecath{
+			@include tab{
+				img{
+					margin: 0 0 30px;
+					border: none;
+				}
+			}
+		}
+		.contents_Area{
+			font-size: 1.8rem;
+			@include tab{
+				padding: 0 4%;
+				box-sizing:border-box;
+			}
+			a{
+				color: #2196F3;
+				text-decoration: underline;
+				font-style: italic;
+			}
+			p{
+				margin: 30px 0;
+				letter-spacing: 0;
+				font-size: 1.8rem;
+				line-height: 2;
+			}
+			h2,
+			h3{
+				font-size: 2.4rem;
+				margin: 40px 0 24px;
+				padding: 0;
+				@include tab{
+					font-size: 2rem;
+				}
+			}
+			h4{
+				font-size: 1.8rem;
+				margin: 30px 0 20px;
+				@include tab{
+					font-size: 1.6rem;
+				}
+			}
+			ul{
+				padding: 32px;
+				border-radius: 4px;
+				background: #f7f9f9;
+				font-size: 1.6rem;
+				margin-bottom: 20px;
+				@include tab{
+					padding: 24px;
+				}
+				li{
+					list-style-type: disc;
+					strong{
+						font-size: 2rem;
+					}
+
+				}
+			}
+			table{
+				width: 100%;
+				font-size: 1.4rem;
+				margin: 4rem 0;
+			}
+			table th{
+				width: 20%;
+				font-weight: bold;
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+				white-space: nowrap;
+				vertical-align: top;
+				padding: 22px 0 18px;
+				text-align: left;
+			}
+			table td{
+				width: 80%;
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+				vertical-align: top;
+				box-sizing: border-box;
+				padding: 22px 0 18px;
+				padding-left: 20px;
+			}
+			.pager{
+				width: 100%;
+				border-top: 1px solid #DEDEDE;
+				border-bottom: 1px solid #DEDEDE;
+				padding: 20px 0;
+				a{
+					display: block;
+					color: #222;
+					text-decoration: none;				
+				}
+				img {
+					width: 60px;
+					height: 60px;
+					object-fit: cover;
+					margin: 0;
+				}
+				P{
+					margin: 0;
+				}
+				.title{
+					font-size: 1.3rem;
+					width: 70%;				
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+				}
+			}
+			.addthis_tool{
+				margin-bottom: 40px;
+				text-align: right;
+				a{
+					margin-bottom: 0;
+					margin-right: 0;
+					margin-left: 6px;
+					border-radius: 2px !important;
+					&:first-child{
+						margin-left: 0;
+					}
+				}
+			}
+			.tag_Area{
+				margin-bottom: 30px;
+				a{
+					color: #333;
+					text-decoration: none;
+					font-style: normal;
+					font-size: 1.4rem;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					padding: 2px 6px;
+					margin-left: 10px;
+					margin-bottom: 10px;
+					&:before{
+						content: "#";
+						margin-right: 4px;
+					}
+					&:first-child{
+						margin-left: 0;
+					}
+				}
+			}
+			.Author_Area{
+				justify-content: space-between;
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+				border-bottom: 1px solid #ddd;
+				.avatar{
+					width: 80px;
+					height: 80px;
+					border-radius: 50%;
+					img{
+						border:none;
+						margin: 0;
+					}
+				}
+				.text_Area{
+					width: calc(100% - 100px);
+					.name{
+						margin: 0;
+						font-weight: 700;
+					}
+					.descripiton{
+						font-size: 1.6rem;
+						line-height: 1.5;
+						margin: 0;
+						@include tab{
+							font-size: 1.3rem;
+						}
+					}
+				}
+			}
+			.ads_Area{
+				margin-bottom: 30px;
+			}
+			.back,
+			.next {
+				width: 50%;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				.pagelink {
+					position: relative;
+					font-size: 1.2rem;
+					display: inline-block;
+					width: 100%;
+					opacity: 0.8;
+					margin-top: -15px;
+					box-sizing: border-box;
+				}
+				.title{
+					margin-left: 10px;
+				}
+				.post{
+					@include tab{
+						display: none;
+					}
+				}
+			}
+			.back{
+				border-right: 1px solid #DEDEDE;
+				.pagelink{
+					text-align: left;
+					&::before{
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						content: "\f053";
+						font-size: 1rem;
+						margin-right: 4px;
+					}
+				}
+			}
+			.next{
+				padding-left: 10px;
+				.pagelink{
+					text-align: right;
+					&::after{
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						content: "\f054";
+						font-size: 1rem;
+						margin-left: 4px;
+					}
+				}
+			}
+			blockquote{
+				padding-left: 12px;
+				margin-left: 16px;
+				border-left: 4px solid #0492e3;
+				font-style: italic;
+				font-weight: 600;
+				color: #0492e3;
+				p{
+					margin: 0;
+				}
+				cite{
+					font-size: 1.4rem;
+					color: #888;
+				}
+			}
+		}
+		
+	}
+  }
+

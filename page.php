@@ -1,14 +1,22 @@
-<?php get_header(); ?>
-<?php 
-if ( have_posts() ) :
-    while ( have_posts() ) : the_post();
-?>
-  
-<?php the_content(); ?>
+<!doctype html>
+  <html>
+  <?php get_header(); ?>
+  <?php include('contents_header.php'); ?>
 
-<?php 
-  endwhile;
-endif;
-?>
+  <main role="main">
+    <div class="contents_Inner">
+    <h1><?php wp_title('')?></h1>
+        <?php
+      if ( have_posts() ) :
+          while ( have_posts() ) : the_post();
+      ?>
+        
+      <?php the_content(); ?>
 
+      <?php
+        endwhile;
+      endif;
+      ?>
+    </div>
+  </main>
 <?php get_footer(); ?>

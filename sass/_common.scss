@@ -1,0 +1,338 @@
+	@charset "utf-8";
+/* ===================================================================
+CSS information
+file name : common.scss
+style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+$pc: 1024px; // PC
+$tab: 750px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+	@media (max-width: ($pc)) {
+	  @content;
+	}
+  }
+  @mixin tab {
+	@media (max-width: ($tab)) {
+	  @content;
+	}
+  }
+  @mixin sp {
+	@media (max-width: ($sp)) {
+	  @content;
+	}
+  }
+.button{
+	a{
+		max-width: 300px;
+		text-align: center;
+		display: block;
+		height: 44px;
+		line-height: 44px;
+		border: 1px solid #333;
+		margin: 0 auto;
+		background: #fff;
+		border-radius: 4px;
+		background: #333;
+		color: #fff;
+		font-size: 1.4rem;
+		&:hover{
+			color: #222;
+			background: #fff;
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			transition: all .3s ease;	
+		}
+	}
+}
+.contents_Inner{
+	max-width: 1240px;
+	margin: 3vw auto 5vw;
+	padding: 0 4%;
+}
+/*----------------------------------------------------
+　.breadcrumbs パンくずリスト設定
+----------------------------------------------------*/ 
+.breadcrumbs {
+	font-size: 1.4rem;
+    opacity: 0.5;
+	padding: 0 4%;
+	@include tab{
+		display: none;
+	}
+}
+
+/*----------------------------------------------------
+    #article_Area
+----------------------------------------------------*/
+#article_Area{
+	.categoryArea{
+		padding: 0 0 2vw;
+		li{
+			margin-left: 1%;
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+	}
+	.article_contents_Wrapper{
+		display: grid;
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 68% 1fr;
+		grid-template-columns: 68% 1fr;
+		gap: 4%;
+		@include tab{
+			display: block;
+		}
+		.article_contents{
+			@include tab{
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+/*----------------------------------------------------
+    .card, .card_smoll, .card_horizon
+----------------------------------------------------*/
+.card,
+.card_smoll,
+.card_horizon{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+	a{
+		display: block;
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.eyecath{
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		padding-top: 54%;
+		border-radius: 4px;
+		img{
+			margin: 0 !important;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+			-o-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+			height: auto;
+			display: block;
+			background: #ccc;
+		}
+	}
+	.card_infoArea{
+		.card_infoArea_textArea{
+			.card_date{
+				font-size: 1.4rem;
+				opacity: 0.5;
+				display: block;
+				margin-top: 0 !important;
+				margin-bottom: 4px;
+				@include tab{
+					font-size: 1.2rem;
+				}
+			}
+			.text{
+				font-weight: 700;
+				margin-top: 0 !important;
+				margin-bottom: 2%;
+			}
+			.text_detail{
+				opacity: 0.6;
+			}
+		}
+	}
+}
+.card_horizon{
+	display: grid;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 240px 1fr;
+	grid-template-columns: 240px 1fr;
+	gap: 2vw;
+	margin-bottom: 2vw !important;
+	padding-bottom: 2vw;
+	@include tab{
+		-ms-grid-columns: 40% 1fr;
+		grid-template-columns: 40% 1fr;
+		margin-bottom: 3vw !important;
+		padding-bottom: 3vw;
+		.eyecath{
+			padding-top: 68%;
+			img{
+				height: 100%;
+			}
+		}
+	}
+	.card_infoArea{
+		.card_infoArea_textArea{
+			padding-top: 0;
+			.text{
+				font-size: 1.8rem;
+				@include tab{
+					font-size: 1.6rem;
+					line-height: 1.4;
+				}
+			}
+		}
+	}
+}
+.reccomend_Area{
+	h3{
+		font-size: 1.4vmax !important;
+		margin-top: 0 !important;
+		@include tab{
+			font-size: 1.8rem !important;
+		}
+	}
+	.card_horizon:last-of-type{
+		border:none;
+	}
+}
+.card_smoll{
+	margin-bottom: 2vw;
+	padding-bottom: 1vw;
+	@include tab{
+		margin-bottom: 3vw;
+		padding-bottom: 2vw;
+	}
+	.card_infoArea_textArea{
+		padding: 19px 0 0;
+		@include tab{
+			padding: 10px 0 0;
+		}
+		.text{
+			font-size: 1.8rem;
+			line-height: 1.5;
+		}
+	}
+}
+.side{
+	.text{
+		a{
+			position: static;
+			height: auto;
+			width: auto;
+		}
+	}
+}
+.card_large{
+	margin-bottom: 3vw;
+	padding-bottom: 2vw;
+	@include tab{
+		margin-bottom: 4vw;
+		padding-bottom: 3vw;
+	}
+	.card_infoArea_textArea{
+		padding: 19px 0 0;
+		@include tab{
+			padding: 10px 0 0;
+		}
+		.text{
+			font-size: 2vmax;
+			@include tab{
+				font-size: 2rem;
+				line-height: 1.4;
+			}
+		}
+		.text_detail{
+			@include tab{
+				font-size: 1.3rem;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------
+ .category
+----------------------------------------------------*/ 
+.category,
+.search{
+	h1{
+		font-size: 2vmax;
+		margin-bottom: 2vw;
+		@include tab{
+			font-size: 2.2rem;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	}
+	#article_Area{
+		@include tab{
+		}
+	}
+}
+
+/*----------------------------------------------------
+ .pager
+----------------------------------------------------*/ 
+.wp-pagenavi{
+    margin: 0 0 60px;
+    padding: 8px 0;
+	text-align: center;
+	@include tab{
+		margin: 0;
+	}
+	span,
+	a {
+		margin: 0 1px;
+		font-size: 1.6rem;
+		padding: 0.6em 1em;
+		border-radius: 3px;
+		text-decoration: none;
+		border: 1px solid #eee;
+		box-sizing: border-box;
+		&:hover{
+			background: #333;
+			color: #FFF;
+		}
+	}
+	.current{
+		border: none;
+		background: #333;
+		color: #FFF;
+	}
+}
+
+#privacy_contents{
+	p{
+		margin: 30px 0;
+		letter-spacing: 0;
+		font-size: 1.8rem;
+		line-height: 2;
+	}
+	h2,
+	h3{
+		font-size: 2.4rem;
+		margin: 40px 0 24px;
+		padding: 0;
+		@include tab{
+			font-size: 2rem;
+		}
+	}
+	ul{
+		padding: 25px 36px;
+		border-radius: 4px;
+		background: #f7f9f9;
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+		@include tab{
+			padding: 20px;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+<Files ~ "\.(html|php|jpe?g|gif|png|css|js|pdf)$">
+Header add Pragma "no-cache"
+Header set Cache-Control no-cache
+</Files>
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+

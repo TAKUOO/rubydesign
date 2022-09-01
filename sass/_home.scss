@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+file name : home.scss
+style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+$pc: 1024px; // PC
+$tab: 750px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+	@media (max-width: ($pc)) {
+	  @content;
+	}
+  }
+  @mixin tab {
+	@media (max-width: ($tab)) {
+	  @content;
+	}
+  }
+  @mixin sp {
+	@media (max-width: ($sp)) {
+	  @content;
+	}
+  }
+
+/*----------------------------------------------------
+    #pickupNews
+----------------------------------------------------*/
+#pickupNews{
+	margin:0 8% 1vw;
+	position: relative;
+	.date{
+		margin-right: 10px;
+		opacity: 0.6;
+		font-size: 1vmax;
+		@include tab{
+			font-size: 1.4rem;
+		}
+	}
+	.subject{
+		font-size: 1.1vmax;
+		@include tab{
+			font-size: 1.4rem;
+		}
+	}
+	.more_datail{
+		position: absolute;
+		right: 0;
+		top: 0;
+		font-size: 1vmax;
+		opacity: 0.6;
+		@include tab{
+			display: none;
+		}
+		&:after{
+			padding-left: 6px;
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 0.7vmax;
+			content: "\f054";
+		}
+	}
+}
+
+/*----------------------------------------------------
+    #workstyle
+----------------------------------------------------*/
+#workstyle{
+	.contents_Inner{
+		justify-content: space-between;
+		margin: 6vw auto;
+		@include tab{
+			margin: 10vw auto;
+		}
+	}
+	.text_Area{
+			width: 46%;
+			@include tab{
+				width: 100%;
+			}
+		h2{
+			font-size: 2.7vmax;
+			margin-bottom: 2vw;
+			@include tab{
+				text-align: center;
+				font-size: 4vmax;
+			}
+		}
+		p{
+			margin: 20px 0;
+			font-size: 1.8rem;
+			@include tab{
+				font-size: 1.6rem;
+			}
+			span{
+				display: block;
+				@include tab{
+					display: inline;
+				}
+			}
+		}
+	}
+	.image_Area{
+		width: 38%;
+		@include tab{
+			width: 60%;
+			margin: 0 auto;
+		}
+		img{
+			width: 100%;
+		}
+	}
+}
+
+/*----------------------------------------------------
+    #projectArea
+----------------------------------------------------*/
+.tab{
+	padding: 1% 0;
+	justify-content: space-between;
+	@include tab{
+		padding: 10px 0;
+	}
+	.categrory_title{
+		font-size: 2.4vmax;
+		font-weight: 400;
+		font-family: 'Roboto Condensed', sans-serif;
+		@include tab{
+			font-size: 2.2rem;
+			display: block;
+			width: 100%;
+		}
+	}
+	.category_lead{
+		font-size: 1vmax;
+		padding-left: 10px;
+		opacity: 0.6;
+		@include tab{
+			padding-left: 0;
+			font-size: 1.2rem;
+		}
+	}
+	.iconOpen{
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		border: 1px solid #222;
+		padding-top: 2px;
+		@include tab{
+			width: 28px;
+			height: 28px;	
+		}
+	}
+	.iconArrow{
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		border: 1px solid #222;
+		@include tab{
+			width: 28px;
+			height: 28px;	
+		}
+	}
+}
+.close
+	.iconOpen{
+	&:before{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f077";
+		font-size: 1vmax;
+	}
+}
+.iconOpen{
+	&:before{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f078";
+		font-size: 1vmax;
+	}
+}
+.iconArrow{
+	&:before{
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f054";
+		font-size: 1vmax;
+	}
+}
+.home{
+	#projectArea,
+	#article_Area{
+		padding: 0 2%;
+		border-top: 1px solid #ddd;
+	}
+}
+#projectArea{
+	.contents_Inner{
+		display: grid;
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 2vw;
+		margin-bottom: 4vw;
+		@include tab{
+			display: block;
+		}
+		.card_smoll{
+			border: none;
+			padding:0;
+			margin:0;
+			@include tab{
+				margin-bottom: 8vw;
+			}
+			img{
+				border-radius: 4px;
+			}
+		}
+	}
+}
+#blogArea{
+	.blogArea_contents_Inner{
+		margin-bottom: 4%;
+	}
+}
