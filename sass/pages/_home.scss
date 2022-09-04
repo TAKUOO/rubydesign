@@ -4,26 +4,6 @@ CSS information
 file name : home.scss
 style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
 =================================================================== */
-$pc: 1024px; // PC
-$tab: 750px; // タブレット
-$sp: 480px;  // スマホ
-
-@mixin pc {
-	@media (max-width: ($pc)) {
-	  @content;
-	}
-  }
-  @mixin tab {
-	@media (max-width: ($tab)) {
-	  @content;
-	}
-  }
-  @mixin sp {
-	@media (max-width: ($sp)) {
-	  @content;
-	}
-  }
-
 /*----------------------------------------------------
     #pickupNews
 ----------------------------------------------------*/
@@ -59,6 +39,30 @@ $sp: 480px;  // スマホ
 			font-weight: 900;
 			font-size: 0.7vmax;
 			content: "\f054";
+		}
+	}
+}
+
+.content-title{
+	.en{
+		font-size: 4rem;
+		font-weight: 400;
+		font-family: 'Roboto Condensed', sans-serif;
+		line-height: 1;
+		@include tab{
+			font-size: 3.2rem;
+			display: block;
+			width: 100%;
+		}
+	}
+	.jp{
+		font-size: 1.8rem;
+		padding-left: 16px;
+		opacity: 0.6;
+		line-height: 1;
+		@include tab{
+			padding: 0.5em 0 0;
+			font-size: 1.6rem;
 		}
 	}
 }
@@ -116,94 +120,26 @@ $sp: 480px;  // スマホ
 /*----------------------------------------------------
     #projectArea
 ----------------------------------------------------*/
-.tab{
-	padding: 1% 0;
-	justify-content: space-between;
-	@include tab{
-		padding: 10px 0;
-	}
-	.categrory_title{
-		font-size: 2.4vmax;
-		font-weight: 400;
-		font-family: 'Roboto Condensed', sans-serif;
-		@include tab{
-			font-size: 2.2rem;
-			display: block;
-			width: 100%;
-		}
-	}
-	.category_lead{
-		font-size: 1vmax;
-		padding-left: 10px;
-		opacity: 0.6;
-		@include tab{
-			padding-left: 0;
-			font-size: 1.2rem;
-		}
-	}
-	.iconOpen{
-		width: 34px;
-		height: 34px;
-		border-radius: 50%;
-		border: 1px solid #222;
-		padding-top: 2px;
-		@include tab{
-			width: 28px;
-			height: 28px;	
-		}
-	}
-	.iconArrow{
-		width: 34px;
-		height: 34px;
-		border-radius: 50%;
-		border: 1px solid #222;
-		@include tab{
-			width: 28px;
-			height: 28px;	
-		}
-	}
-}
-.close
-	.iconOpen{
-	&:before{
-		font-family: "Font Awesome 5 Free";
-		font-weight: 900;
-		content: "\f077";
-		font-size: 1vmax;
-	}
-}
-.iconOpen{
-	&:before{
-		font-family: "Font Awesome 5 Free";
-		font-weight: 900;
-		content: "\f078";
-		font-size: 1vmax;
-	}
-}
-.iconArrow{
-	&:before{
-		font-family: "Font Awesome 5 Free";
-		font-weight: 900;
-		content: "\f054";
-		font-size: 1vmax;
-	}
-}
 .home{
 	#projectArea,
 	#article_Area{
-		padding: 0 2%;
-		border-top: 1px solid #ddd;
+		padding: 3em 2% 0;
+		max-width: 1240px;
+		margin: 0 auto;
+		@include tab{
+			padding: 2em 4% 0;
+
+		}
 	}
 }
+
 #projectArea{
 	.contents_Inner{
-		display: grid;
 		display: -ms-grid;
 		display: grid;
 		-ms-grid-columns: 1fr 1fr 1fr;
 		grid-template-columns: 1fr 1fr 1fr;
-		gap: 2vw;
-		margin-bottom: 4vw;
+		gap: 2%;
 		@include tab{
 			display: block;
 		}

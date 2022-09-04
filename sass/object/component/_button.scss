@@ -1,0 +1,85 @@
+.c{
+    &-button{
+        padding: 16px 32px;
+        background-color: var(--c-white);
+        font-size: 16px;
+        border-radius: 8px;
+        line-height: 1;
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.07);
+        &:hover{
+            background-color: var(--c-parimary-bg-hover);
+        }
+        &-mint {
+            @extend .c-button;
+            background-color: var(--c-primary);
+            &:hover{
+                background-color: var(--c-parimary-hover);
+            }
+        }
+
+        &-pink {
+            @extend .c-button;
+            background-color: var(--c-pink);
+            &:hover{
+                background-color: var(--c-pink-hover);
+            }
+        }
+
+        &-purple {
+            @extend .c-button;
+            background-color: var(--c-purple);
+            &:hover{
+                background-color: var(--c-purple-hover);
+            }
+        }
+
+        &-caution{
+            @extend .c-button;
+            color: var(--c-red);
+            border: 1px solid var(--c-red);
+            background-color: rgba(var(--c-red-rgb), .1);
+            &:hover{
+                background-color: var(--c-red);
+                color: var(--c-white);
+            }
+        }
+
+        &-plane {
+            @extend .c-button;
+            background-color: var(--c-white);
+            color: var(--c-black);
+            &__border{
+                @extend .c-button-plane;
+                border: 1px solid var(--c-gray-border);
+                font-size: 14px;
+            }
+        }
+
+        &-dark {
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: var(--c-white);
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid #626262;
+            &:hover{
+                border: 1px solid var(--c-gray-border-lighter);
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        &-round {
+            @extend .c-button;
+            border-radius: 200px;
+            box-sizing: border-box;
+            line-height: 1;
+        }
+
+        &-none {
+            @extend .c-button;
+            background: none;
+            color: var(--c-gray);
+        }
+
+    }
+}

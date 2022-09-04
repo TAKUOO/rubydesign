@@ -1,0 +1,30 @@
+.cv{
+    &-buttons{
+
+    }
+    &-button{
+        display: flex;
+        font-weight: 700;
+        margin-left: 24px;
+        .label{
+            margin-left: 12px;
+        }
+    }
+}
+
+.contents_Inner{
+    margin: 2em auto 0;
+}
+
+.pc_only{
+    display: block;
+    @include sp{
+        display: none;
+    }
+}
+.sp_only{
+    display: none;
+    @include sp{
+        display: block;
+    }
+}

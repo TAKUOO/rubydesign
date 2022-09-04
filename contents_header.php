@@ -92,14 +92,10 @@
             </nav>
             <div class="sub_navgation flex">
                 <?php get_search_form(); ?>
-                <div class="snsArea">
-                    <ul class="flex">
-                        <li><a href="https://twitter.com/matui_takafumi" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com/RUBY-DESIGN-276841105839928/"　target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <!-- <li><a href="#"><i class="fas fa-rss"></i></a></li> -->
-                    </ul>
-                </div>
-                <div class="contact"><a href="/contact" class="sub_button">お問い合わせ</a></div>
+                <a role="button" href="/contact" class="cv-button c-button-round flex">
+                    <span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon/mail@2x1.svg"></span>
+                    <span class="label">相談する</span>
+                </a>
             </div>
         </div>
     </div>

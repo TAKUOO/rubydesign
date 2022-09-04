@@ -1,0 +1,73 @@
+// カラー
+:root{
+    --c-beige-bg:#F5F4EF;
+    --c-primary: #57B4C0;
+    --c-parimary-hover:#6cc8d4;
+    --c-primary-bg: #EBF5FF;
+    --c-parimary-bg-hover:#f6f8ff;
+    --c-primary-purple-rgb:116,94,158;
+    --c-primary-border:#745E9E;
+    --c-primary-border-rgb:116,94,158;
+    --c-secondary: #1D4C94;
+    --c-secondar-bg: #F0F6F6;
+    --c-accent:#e59500;
+    --c-playing-bg:#005E52;
+    --c-white:#fff;
+    --c-pink: #D13878;
+    --c-pink-rgb: 209,56,120;
+    --c-pink-hover: #e9317e;
+    --c-purple:#745E9E;
+    --c-purple-hover:#977ec5;
+    --c-black: #222;
+    --c-black-bg: rgba(0, 0, 0, .3);
+    --c-gray:#666;
+    --c-gray-darker:#A6A6A6;
+    --c-gray-bg:#f6f6f6;
+    --c-gray-lighter:#A6A6A6;
+    --c-gray-lightest:#FBFBFB;
+    --c-gray-border:#CBDADC;
+    --c-gray-border-lighter:#eee;
+    --c-link: #30BCF9;
+    --c-hove-bg: #f5f5f5;
+    --c-red:#ff5959;
+    --c-red-rgb: 255,89,89;
+    --c-blue-rgb:70,211,255;
+    --c-twitter-blue: #1C9BF0;
+}
+$Awesome: "Font Awesome 5 Free";
+
+$pc: 1200px; // PC
+$lt: 1024px; // ラップトップ
+$tab: 768px; // タブレット
+$sp: 767px;  // スマホ
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+@mixin lt {
+    @media (max-width: ($lt)) {
+        @content;
+    }
+}
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+@include sp{
+    .pc { display:none; }
+    .sp { display:inline; }
+}
+@media pc{
+    .pc { display:inline; }
+    .sp { display:none; }
+}
+

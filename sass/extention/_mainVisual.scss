@@ -1,0 +1,79 @@
+#mainVisual{
+  padding: 100px 4% 0;
+  background: var(--c-beige-bg);
+  @include tab{
+    padding: 60px 0 0;
+  }
+}
+
+.main-visual{
+  &_inner{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 0 6rem;
+    @include tab{
+      padding: 0 0 4rem;
+      display: block !important;
+    }
+  }
+
+  &_head{
+    order: 2;
+    max-width: 740px;
+    width: 56%;
+    @include tab{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+  &_body{
+    padding: 0 1% 0 6%;
+    flex: 1;
+    order: 1;
+    @include tab{
+      padding: 2em 6% 0;
+    }
+    h1{
+      font-size: 3.6rem;
+      @include tab{
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &_desc{
+    padding-top: 2.4rem;
+    & > p{
+      margin-top: 1.6rem;
+      font-size: 1.8rem;
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+  .cv{
+    &-buttons{
+      margin-top: 4rem;
+      align-items: stretch;
+      @include tab{
+        display: block;
+        max-width: 240px;
+        margin: 4rem auto 0;
+      }
+    }
+    &-button{
+      padding: 16px 50px;
+      @include tab{
+        margin: 16px 0 0;
+        height: 64px;
+      }
+      &:first-of-type{
+        margin: 0;
+      }
+    }
+  }
+
+}

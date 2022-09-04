@@ -30,11 +30,6 @@ html {
   :focus{
     outline: none;
   }
-  a{
-    &:hover{
-      opacity: 0.5;
-    }
-  }
 /*----------------------------------------------------
     flex設定
 ----------------------------------------------------*/ 
@@ -85,7 +80,7 @@ html {
     color: #fff;
   }
   .secondaryBackGroundColor{
-    background: #222222;
+    background: #000;
     color: #fff;
   }
   .caption_type01{

@@ -41,15 +41,15 @@ footer{
     #contactArea
 	----------------------------------------------------*/
 	#contactArea{
-		padding: 5% 2%;
+		padding: 6em 4%;
 		position: relative;
 		background-size: 200% 100%;
-		background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
-		background-image: linear-gradient(to right, transparent 50%, #000 50%);
+		background-image: -webkit-linear-gradient(left, transparent 50%, #d50860 50%);
+		background-image: linear-gradient(to right, transparent 50%, #d50860 50%);
 		-webkit-transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s, color 0.5s ease 0s, background-color 0.5s ease;
 		transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s, color 0.5s ease 0s, background-color 0.5s ease;
 		&:hover{
-			background-color: #000;
+			background-color: #d50860;
 			background-position: -100% 100%;
 		}
 		@include tab{

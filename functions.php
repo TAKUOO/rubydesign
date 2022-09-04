@@ -33,6 +33,7 @@ if ( function_exists( 'register_sidebar' ) ) {
 };
 
 
+
 function wpcf7_validation_textarea_hiragana($result, $tag)
 {
     $name = $tag['name'];
@@ -114,3 +115,8 @@ function my_add_content( $content ) {
     return $content;
 }
 add_filter( 'the_content', 'my_add_content' );
+
+function sample_theme_slug_setup() {
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'sample_theme_slug_setup' );

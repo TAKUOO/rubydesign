@@ -1,0 +1,18 @@
+:disabled{
+     opacity: .7;
+ }
+
+.text{
+    &-lists{
+
+    }
+    &-list{
+        font-size: 14px;
+        list-style-type: disc;
+        margin-left: 16px;
+    }
+}
+
+textarea {
+    background: none;
+}

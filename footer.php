@@ -2,11 +2,10 @@
     <section id="contactArea" class="secondaryBackGroundColor">
         <a href="/contact"></a>
         <div class="tab flex">
-            <h2 class="flex">
-                <span class="categrory_title">CONTACT</span>
-                <span class="category_lead">お問い合わせ・ご相談</span>
+            <h2 class="content-title flex">
+                <span class="en">CONTACT</span>
+                <span class="jp">お問合せ・ご相談</span>
             </h2>
-            <span class="iconArrow flex_center"></span>
         </div>
     </section>
     <div class="sitemap flex">
