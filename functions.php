@@ -6,6 +6,22 @@ add_filter('wpcf7_validate_textarea*', 'wpcf7_validation_textarea_hiragana', 10,
 remove_filter('the_content', 'wpautop');
 remove_filter( 'the_excerpt', 'wpautop' );
 
+// タイトル変更
+function wp_document_title_parts($title)
+{
+    if (is_home() || is_front_page()) {
+        unset($title['tagline']); // キャッチフレーズを出力しない
+    } else if (is_category()) {
+        $title['title'] = '「' . $title['title'] . '」カテゴリーの記事一覧';
+    } else if (is_tag()) {
+        $title['title'] = '「' . $title['title'] . '」タグの記事一覧';
+    } else if (is_archive()) {
+        $title['title'] = $title['title'] . 'の記事一覧';
+    }
+    return $title;
+}
+add_filter('document_title_parts', 'wp_document_title_parts', 10, 1);
+
 function my_contact_enqueue_scripts(){
     wp_deregister_script('contact-form-7');
     wp_deregister_style('contact-form-7');

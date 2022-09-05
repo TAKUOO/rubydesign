@@ -1,23 +1,12 @@
-<body <?php body_class(); ?> id="<?php echo esc_attr( $post->post_name ); ?>">
-<!-- facebook ogp設定 -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '529338887542979',
-      xfbml      : true,
-      version    : 'v6.0'
-    });
-    FB.AppEvents.logPageView();
-  };
+<?php
+$body_id = "";
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+if (is_page()) {
+    $body_id  = ' id="' . $post->post_name . '" ';
+}
+
+?>
+<body <?php echo $body_id; ?> <?php body_class(); ?>>
 
 <!-- ヘッダー -->
 <header>
@@ -60,10 +49,8 @@
                             <h3>ソーシャル</h3>
                             <div class="contents_wrap">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/RUBY-DESIGN-276841105839928/" target="_blank"><i class="fab fa-facebook-f"></i>facebook</a></i></li>
                                     <li><a href="https://twitter.com/matui_takafumi"  target="_blank" ><i class="fab fa-twitter"></i>Twitter</a></li>
-                                    <!-- <li><a href="#" class="flex_center"><i class="fas fa-rss"></i>RSS</a></li> -->
-                                    </ul>
+                                </ul>
                             </div>
                         </div>
                     </section>
@@ -101,7 +88,7 @@
     </div>
 </header>
 
-<?php if( !is_home() ): ?>
+<?php if( !is_front_page() ): ?>
     <div class="breadcrumbs">
     <?php
     // パンくずリストを表示

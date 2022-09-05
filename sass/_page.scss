@@ -4,25 +4,6 @@ CSS information
 file name : page.scss
 style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
 =================================================================== */
-$pc: 1024px; // PC
-$tab: 750px; // タブレット
-$sp: 480px;  // スマホ
-
-@mixin pc {
-	@media (max-width: ($pc)) {
-	  @content;
-	}
-  }
-  @mixin tab {
-	@media (max-width: ($tab)) {
-	  @content;
-	}
-  }
-  @mixin sp {
-	@media (max-width: ($sp)) {
-	  @content;
-	}
-  }
 .page{
     h1{
         font-size: 3rem;
@@ -40,7 +21,7 @@ $sp: 480px;  // スマホ
         margin-bottom: 30px;
     }
     .contents_Inner{
-        max-width: 620px;
+        max-width: 960px;
         .form_box{
             padding: 50px 0;
         }

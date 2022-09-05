@@ -1,18 +1,23 @@
 <?php
 $category = get_the_category();
-$cat_id   = $category[0]->cat_ID;
-$cat_name = $category[0]->cat_name;
-$cat_slug = $category[0]->category_nicename;
+$cats = get_the_category();
+
+foreach( $cats as $cat_key => $cat ){
+    $index_key = $cat_key;
+
+//    if( $cat->category_parent == 0 ){
+//        break;
+//    }
+    if( $post->post_name ){
+        break;
+    }
+}
+
+$cat_id   = $category[$index_key]->cat_ID;
+$cat_name = $category[$index_key]->cat_name;
+$cat_slug = $category[$index_key]->category_nicename;
 ?>
 
-<!-- カテゴリーIDを表示したい所に-->
-<?php echo $cat_id; ?>
-
-<!--カテゴリー名を表示したい所に-->
-<?php echo $cat_name; ?>
-
-<!--カテゴリースラッグを表示したい所に-->
-<?php echo $cat_slug; ?>
 
 <!doctype html>
 <html>
@@ -23,7 +28,10 @@ $cat_slug = $category[0]->category_nicename;
 <main role="main">
 	<section id="article_Area">
 		<div class="contents_Inner">
-			<h1><?echo get_the_category()?></h1>
+            <h1>
+                <?echo $cat_name; ?>
+<!--                <pre>--><?//print_r(get_the_category())?><!--</pre>-->
+            </h1>
 			<?php get_template_part('loop', 'main'); ?>
 		</div>
 	</section>
