@@ -1,6 +1,9 @@
 #mainVisual{
   padding: 100px 4% 0;
   background: var(--c-beige-bg);
+  @include lt{
+    padding: 100px 0 0;
+  }
   @include tab{
     padding: 60px 0 0;
   }
@@ -11,7 +14,7 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 4rem 0 6rem;
-    @include tab{
+    @include lt{
       padding: 0 0 4rem;
       display: block !important;
     }
@@ -21,7 +24,9 @@
     order: 2;
     max-width: 740px;
     width: 56%;
-    @include tab{
+    flex: 1;
+    @include lt{
+      max-width: 100%;
       width: 100%;
     }
     img{
@@ -30,15 +35,18 @@
   }
 
   &_body{
+    width: 40%;
     padding: 0 1% 0 6%;
     flex: 1;
     order: 1;
-    @include tab{
+    box-sizing: border-box;
+    @include lt{
+      width: 100%;
       padding: 2em 6% 0;
     }
     h1{
       font-size: 3.6rem;
-      @include tab{
+      @include lt{
         font-size: 2.4rem;
       }
     }
@@ -58,7 +66,7 @@
     &-buttons{
       margin-top: 4rem;
       align-items: stretch;
-      @include tab{
+      @include lt{
         display: block;
         max-width: 240px;
         margin: 4rem auto 0;
@@ -66,7 +74,7 @@
     }
     &-button{
       padding: 16px 50px;
-      @include tab{
+      @include lt{
         margin: 16px 0 0;
         height: 64px;
       }
