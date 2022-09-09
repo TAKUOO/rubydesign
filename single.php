@@ -40,11 +40,12 @@
             <!-- 投稿者 -->
             <div class="Author_Area flex">
                 <div class="avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?></div>
-            <div class="text_Area">
-                <p class="name"><?php the_author(); ?></p>
-                <p class="descripiton"><?php the_author_meta('user_description'); ?></p>
+                <div class="text_Area">
+                    <p class="name"><?php the_author(); ?></p>
+                    <p class="descripiton"><?php the_author_meta('user_description'); ?></p>
+                    <div class="twitter-button"><a href="https://twitter.com/matui_takafumi?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="ja" data-show-count="false">Follow @matui_takafumi</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                </div>
             </div>
-        </div>
 
         <div class="ads_Area">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -59,9 +60,6 @@
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-
-        <!-- 関連記事 -->
-        <?php include('related-entries.php'); ?>
 
         <!-- 前後の記事の表示 -->
         <div class="pager flex">
@@ -105,16 +103,16 @@
         <?php } ?>
         </div>
         </div>
+
+        <!-- 関連記事 -->
+        <?php include('related-entries.php'); ?>
+
     </article>
     <?php 
     endwhile;
     endif;
     ?>
-    <!--　サイドエリア  -->
-    <aside>
-        <a href="https://saketuma.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_saketuma.png" alt="SAKETUMAのバナー" loading="lazy" class="banner-image"></a>
-        <?php dynamic_sidebar( 'widget_area01' ); ?>
-    </aside>
+    <?php get_sidebar(); ?>
     </section>
 </main>
 <?php get_footer(); ?>

@@ -4,32 +4,12 @@ CSS information
 file name : base.scss
 style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
 =================================================================== */
-html {
-	font-size: 62.5%;
-	-moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  margin: 0 !important;
-	body{
-	  // font-weight: 500;
-    font-size: 16px;
-    overflow: hidden;
-	  line-height: 1.7;
-	  word-wrap: break-word;
-	  word-break: break-all;
-	  font-family: -apple-system, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", Verdana, "メイリオ", Meiryo, sans-serif;
-    font-feature-settings: "pkna" 1;
-    padding-top: 100px;
-    @include tab{
-      padding-top: 60px;
-    }
-		}
-  }
-  .home{
-    padding-top: 0;
-  }
-  :focus{
-    outline: none;
-  }
+.home{
+  padding-top: 0;
+}
+:focus{
+  outline: none;
+}
 /*----------------------------------------------------
     flex設定
 ----------------------------------------------------*/ 

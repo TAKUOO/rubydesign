@@ -1,0 +1,87 @@
+.p-article-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  a{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .article-card{
+    &_thumbnail{
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 8px;
+      position: relative;
+      img{
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+      }
+    }
+
+    &_textarea{
+      padding: 16px 0 0;
+      @include tab{
+        padding: 8px 0 0;
+      }
+
+      time{
+        font-size: 1.6rem;
+        color: var(--c-gray);
+      }
+
+      &.horizon{
+        padding: 0;
+      }
+
+    }
+
+    &_title{
+      font-size: 3.2rem;
+      font-weight: 700;
+      @include tab{
+        font-size: 2.4rem;
+        line-height: 1.6;
+      }
+      &.horizon{
+        font-size: 2.4rem;
+        @include tab{
+          font-size: 1.4rem;
+          line-height: 1.4;
+        }
+      }
+
+      &.aside{
+        font-size: 1.8rem;
+        margin-bottom: 0;
+      }
+
+    }
+
+    &_desc{
+      font-size: 1.8rem;
+      margin-top: 0.5em;
+      color: var(--c-gray);
+      @include tab{
+        font-size: 1.4rem;
+      }
+    }
+
+  }
+}

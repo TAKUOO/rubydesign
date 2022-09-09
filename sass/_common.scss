@@ -80,28 +80,18 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 /*----------------------------------------------------
     .card, .card_smoll, .card_horizon
 ----------------------------------------------------*/
-.card,
-.card_smoll,
-.card_horizon{
+.card_smoll{
 	display: block;
 	position: relative;
 	overflow: hidden;
 	border-bottom: 1px solid #ddd;
-	a{
-		display: block;
-		position: absolute;
-		z-index: 10;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
 	.eyecath{
 		width: 100%;
 		position: relative;
 		overflow: hidden;
 		padding-top: 54%;
-		border-radius: 4px;
+		border-radius: 8px;
+		overflow: hidden;
 		img{
 			margin: 0 !important;
 			width: 100%;
@@ -141,40 +131,16 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 		}
 	}
 }
+
 .card_horizon{
 	display: grid;
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 240px 1fr;
-	grid-template-columns: 240px 1fr;
-	gap: 2%;
-	margin-bottom: 1em !important;
-	padding-bottom: 1em;
-	@include tab{
-		-ms-grid-columns: 40% 1fr;
-		grid-template-columns: 40% 1fr;
-		margin-bottom: 1em !important;
-		padding-bottom: 1em;
-		.eyecath{
-			padding-top: 68%;
-			img{
-				height: 100%;
-			}
-		}
-	}
-	.card_infoArea{
-		.card_infoArea_textArea{
-			padding-top: 0;
-			.text{
-				font-size: 2.4rem;
-				@include tab{
-					font-size: 1.6rem;
-					line-height: 1.4;
-				}
-			}
-		}
-	}
+	-ms-grid-columns: 0.5fr 1fr;
+	grid-template-columns: 0.5fr 1fr;
+	gap: 3%;
 }
+
 .reccomend_Area{
 	h3{
 		font-size: 1.4vmax !important;
@@ -211,32 +177,6 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 			position: static;
 			height: auto;
 			width: auto;
-		}
-	}
-}
-.card_large{
-	margin-bottom: 1em;
-	padding-bottom: 1em;
-	@include tab{
-		margin-bottom: 1em;
-		padding-bottom: 1em;
-	}
-	.card_infoArea_textArea{
-		padding: 19px 0 0;
-		@include tab{
-			padding: 10px 0 0;
-		}
-		.text{
-			font-size: 3.2rem;
-			@include tab{
-				font-size: 2rem;
-				line-height: 1.4;
-			}
-		}
-		.text_detail{
-			@include tab{
-				font-size: 1.3rem;
-			}
 		}
 	}
 }

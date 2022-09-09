@@ -9,45 +9,6 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 		max-width: 100%;
 	}
 }
-/*----------------------------------------------------
-    #pickupNews
-----------------------------------------------------*/
-#pickupNews{
-	margin:0 8% 1vw;
-	position: relative;
-	.date{
-		margin-right: 10px;
-		opacity: 0.6;
-		font-size: 1vmax;
-		@include tab{
-			font-size: 1.4rem;
-		}
-	}
-	.subject{
-		font-size: 1.1vmax;
-		@include tab{
-			font-size: 1.4rem;
-		}
-	}
-	.more_datail{
-		position: absolute;
-		right: 0;
-		top: 0;
-		font-size: 1vmax;
-		opacity: 0.6;
-		@include tab{
-			display: none;
-		}
-		&:after{
-			padding-left: 6px;
-			font-family: "Font Awesome 5 Free";
-			font-weight: 900;
-			font-size: 0.7vmax;
-			content: "\f054";
-		}
-	}
-}
-
 .content-title{
 	.en{
 		font-size: 4rem;
@@ -135,6 +96,9 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 			padding: 2em 4% 0;
 
 		}
+	}
+	#article_Area{
+		padding-bottom: 6em;
 	}
 }
 

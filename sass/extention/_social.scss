@@ -1,0 +1,48 @@
+.flowbtn1{
+  border-radius:50%;
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  font-size:30px;
+  color:#fff!important;
+  text-decoration:none;
+  transition:.5s;
+}
+
+.flowbtn1 i{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+
+ul.sns-list{
+}
+.social_block{
+  justify-content: center;
+}
+.sns-list li{
+  text-align:center !important;
+  margin:10px;
+}
+
+/* Twitter */
+.fl_tw1{
+  background:linear-gradient(135deg, #13f1fc 0%,#0470dc 100%);
+}
+
+.fl_fb1{
+  background: linear-gradient(135deg, #6699ff 0%,#3b5998 100%);
+}
+/* はてブ */
+.fl_hb1{
+  background: linear-gradient(to bottom, #1fbccd 0%, #1c91d4 84%);
+  font-size:25px;
+}
+/* LINE */
+.fl_li1{
+  background: linear-gradient(135deg, #3a9278 0%,#00c300 100%);
+}

@@ -1,3 +1,23 @@
+html{
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 !important;
+  body{
+    font-size: 16px;
+    overflow: hidden;
+    line-height: 1.7;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: 'Poppins', 'Noto Sans JP', "Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", Verdana, "メイリオ", Meiryo, sans-serif;
+    font-feature-settings: "pkna" 1;
+    padding-top: 100px;
+    @include tab{
+      padding-top: 60px;
+    }
+  }
+}
+
 :disabled{
      opacity: .7;
  }

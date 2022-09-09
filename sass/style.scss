@@ -33,6 +33,7 @@ CSS information
 // ==========================================================================
 // project
 // ==========================================================================
+@import "object/project/article_card";
 //@import "object/project/about";
 //@import "object/project/theme_cards";
 //@import "object/project/theme_lists";
@@ -80,6 +81,8 @@ CSS information
 // ==========================================================================
 @import "extention/mainVisual";
 @import "extention/animate";
+@import "extention/mokuji";
+@import "extention/social";
 
 @import
 "common",

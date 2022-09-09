@@ -1,0 +1,42 @@
+.mokuji{
+  border: 1px solid #e5e5e5;
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+  box-sizing: border-box;
+  @include tab{
+    padding: 16px;
+  }
+  &_title{
+    margin: 0 !important;
+    font-weight: 700;
+  }
+  ul{
+    background: none !important;
+    padding: 0 !important;;
+    margin: 0 !important;;
+  }
+  li{
+    border-top: 1px dashed #e5e5e5;
+    text-decoration: none;
+    list-style-type: none !important;
+    &:first-child{
+      border: none;
+    }
+    a{
+      display: inline-block;
+      padding: 8px 0;
+      font-size: 1.6rem;
+      color: var(--c-link);
+      text-decoration: none !important;
+      @include tab{
+        font-size: 1.4rem;
+      }
+    }
+    & > ul > li{
+      list-style: disc;
+      margin-left: 24px;
+      border: none;
+    }
+  }
+}

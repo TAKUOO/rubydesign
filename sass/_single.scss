@@ -4,27 +4,7 @@ CSS information
 file name : single.scss
 style info : リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
 =================================================================== */
-$pc: 1024px; // PC
-$tab: 750px; // タブレット
-$sp: 480px;  // スマホ
-
-@mixin pc {
-	@media (max-width: ($pc)) {
-	  @content;
-	}
-  }
-  @mixin tab {
-	@media (max-width: ($tab)) {
-	  @content;
-	}
-  }
-  @mixin sp {
-	@media (max-width: ($sp)) {
-	  @content;
-	}
-  }
-  
-  .single {
+   .single {
 	  @include tab{
 		  padding-top: 60px;
 	  }
@@ -68,9 +48,10 @@ $sp: 480px;  // スマホ
 		  height: auto !important;
 		  max-width: 1240px;
 		  display: grid;
-		  grid-template-columns: 66% 1fr;
+		  grid-template-columns: 68% 1fr;
 		  gap: 4%;
 		  margin: 24px auto 0;
+		  padding: 0 4%;
 		  @include sp{
 			  display: block;
 			  margin: 0;
@@ -79,10 +60,10 @@ $sp: 480px;  // スマホ
 	  article{
 		  h1{
 			font-size: 3rem;
-			margin-bottom: 8px !important;
+			margin-bottom: 0 !important;
 		  }
 		  .card_date{
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 			opacity: 0.6;
 		  }
 		  .eyecath,
@@ -239,14 +220,22 @@ $sp: 480px;  // スマホ
 				}
 			}
 			.Author_Area{
+				align-items: start;
 				justify-content: space-between;
-				padding-bottom: 30px;
-				margin-bottom: 30px;
-				border-bottom: 1px solid #ddd;
+				padding: 1em;
+				margin-bottom: 1em;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				@include sp{
+					display: block;
+				}
 				.avatar{
 					width: 80px;
 					height: 80px;
 					border-radius: 50%;
+					@include tab{
+						margin: 0 auto;
+					}
 					img{
 						border:none;
 						margin: 0;
@@ -254,16 +243,31 @@ $sp: 480px;  // スマホ
 				}
 				.text_Area{
 					width: calc(100% - 100px);
+					@include sp{
+						width: 100%;
+					}
 					.name{
 						margin: 0;
 						font-weight: 700;
+						font-size: 2rem;
+						@include tab{
+							text-align: center;
+							font-size: 2rem;
+							margin-top: 12px;
+						}
 					}
 					.descripiton{
 						font-size: 1.6rem;
 						line-height: 1.5;
 						margin: 0;
 						@include tab{
-							font-size: 1.3rem;
+							font-size: 1.6rem;
+						}
+					}
+					.twitter-button{
+						margin-top: 12px;
+						@include tab{
+							text-align: center;
 						}
 					}
 				}

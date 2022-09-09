@@ -18,7 +18,7 @@
                 <p>外部チームを持てば、依頼の度に時間の掛かる事業・サービス理解もショートカットできます。</p>
             </div>
             <div class="cv-buttons flex">
-                <a role="button" href="/category/blog" class="cv-button c-button-round flex">
+                <a role="button" href="/blog" class="cv-button c-button-round flex">
                     <span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon/note@2x.svg"></span>
                     <span class="label">記事を読む</span>
                 </a>
@@ -97,14 +97,17 @@
 
 <!-- ブログ -->
 <section id="article_Area">
+
     <h2 class="content-title flex">
         <span class="en">OUT PUT</span>
         <span class="jp">情報発信</span>
     </h2>
+
     <div class="contents_Inner">
+
         <div class="article_contents_Wrapper">
             <!-- ブログ記事エリア -->
-            <div class="article_contents">
+            <div class="p-article-cards">
                 <?php include('main-post.php'); ?>
                 <?php include('post.php'); ?>
                 <div class="button">
@@ -112,12 +115,10 @@
                 </div>
             </div>
             <!--　サイドエリア  -->
-            <aside>
-                <a href="https://saketuma.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_saketuma.png" alt="SAKETUMAのバナー" loading="lazy" class="banner-image"></a>
-                <?php dynamic_sidebar( 'widget_area01' ); ?>
-            </aside>
+            <?php get_sidebar(); ?>
         </div>
     </div>
+
 </section>
 
 <?php get_footer(); ?>
