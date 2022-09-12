@@ -73,7 +73,6 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 				display: block;
 				height: auto;
 				margin: 36px auto;
-				border: 1px solid #e8e8e8;
 			}
 		  }
 		  .eyecath{
@@ -165,7 +164,7 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 				padding: 20px 0;
 				a{
 					display: block;
-					color: #222;
+					color: var(--c-white);
 					text-decoration: none;				
 				}
 				img {
@@ -201,11 +200,11 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 			.tag_Area{
 				margin-bottom: 30px;
 				a{
-					color: #333;
+					color: var(--c-white);
 					text-decoration: none;
 					font-style: normal;
 					font-size: 1.4rem;
-					border: 1px solid #ccc;
+					background-color: #2c2c2c;
 					border-radius: 4px;
 					padding: 2px 6px;
 					margin-left: 10px;

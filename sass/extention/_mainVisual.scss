@@ -1,6 +1,5 @@
 #mainVisual{
   padding: 100px 4% 0;
-  background: var(--c-beige-bg);
   @include lt{
     padding: 100px 0 0;
   }
@@ -25,8 +24,12 @@
     max-width: 740px;
     width: 56%;
     flex: 1;
+    background: var(--c-black-bg);
+    border-radius: 16px;
+    overflow: hidden;
     @include lt{
       max-width: 100%;
+      border-radius: 0;
       width: 100%;
     }
     img{
@@ -36,18 +39,20 @@
 
   &_body{
     width: 40%;
-    padding: 0 1% 0 6%;
-    flex: 1;
+    min-width: 500px;
+    padding: 0 2% 0 0;
+    flex: 0.6;
     order: 1;
     box-sizing: border-box;
     @include lt{
       width: 100%;
-      padding: 2em 6% 0;
+      padding: 2em 4% 0;
+      min-width: 100%;
     }
     h1{
-      font-size: 3.6rem;
+      font-size: 4rem !important;
       @include lt{
-        font-size: 2.4rem;
+        font-size: 2.4rem !important;
       }
     }
   }

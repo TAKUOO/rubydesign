@@ -8,7 +8,7 @@
 <section id="mainVisual" class="main-visual">
     <div class="main-visual_inner flex">
         <div class="main-visual_head">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/mainVisual/main-visual-illust.png" alt="">
+            <?php get_template_part('template-parts/works-slider'); ?>
         </div>
         <div class="main-visual_body">
             <h1>ITを支える外部チームが<br/>サービスの課題を圧倒的に改善</h1>
@@ -53,47 +53,44 @@
 <!--</section>-->
 
 <!-- サービス紹介 -->
-<section id="projectArea">
-    <h2 class="content-title flex">
-        <span class="en">PROJECT</span>
-        <span class="jp">実績</span>
-    </h2>
-    <div class="contents_Inner">
-        <article class="card_smoll">
-            <!-- <a href=""></a> -->
-            <div class="eyecath">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/monobak_ogp.jpg" alt="">
-            </div>
-            <div class="card_infoArea">
-                <div class="card_infoArea_textArea">
-                    <p class="text">二次流通業界のコミュニケーションメディア</p>
-                </div>
-            </div>
-        </article>
-        <article class="card_smoll">
-            <!-- <a href=""></a> -->
-            <div class="eyecath">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/mekiki_ogp.jpg" alt="">
-            </div>
-            <div class="card_infoArea">
-                <div class="card_infoArea_textArea">
-                    <p class="text">WEBで完結できる鑑定・査定サポートサービス</p>
-                </div>
-            </div>
-        </article>
-        <article class="card_smoll">
-            <!-- <a href=""></a> -->
-            <div class="eyecath">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/teamAibod_opg.jpg" alt="">
-            </div>
-            <div class="card_infoArea">
-                <div class="card_infoArea_textArea">
-                    <p class="text">コミュニケーションした相手との関係をAIで可視化する</p>
-                </div>
-            </div>
-        </article>
-    </div>
-</section>
+<!--<section id="projectArea">-->
+<!--    <h2 class="content-title flex">-->
+<!--        <span class="en">PROJECT</span>-->
+<!--        <span class="jp">実績</span>-->
+<!--    </h2>-->
+<!--    <div class="contents_Inner">-->
+<!--        <article class="card_smoll">-->
+<!--            <div class="eyecath">-->
+<!--                <img src="--><?php //echo get_template_directory_uri(); ?><!--/img/monobak_ogp.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="card_infoArea">-->
+<!--                <div class="card_infoArea_textArea">-->
+<!--                    <p class="text">二次流通業界のコミュニケーションメディア</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </article>-->
+<!--        <article class="card_smoll">-->
+<!--            <div class="eyecath">-->
+<!--                <img src="--><?php //echo get_template_directory_uri(); ?><!--/img/mekiki_ogp.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="card_infoArea">-->
+<!--                <div class="card_infoArea_textArea">-->
+<!--                    <p class="text">WEBで完結できる鑑定・査定サポートサービス</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </article>-->
+<!--        <article class="card_smoll">-->
+<!--            <div class="eyecath">-->
+<!--                <img src="--><?php //echo get_template_directory_uri(); ?><!--/img/teamAibod_opg.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="card_infoArea">-->
+<!--                <div class="card_infoArea_textArea">-->
+<!--                    <p class="text">コミュニケーションした相手との関係をAIで可視化する</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </article>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!-- ブログ -->
 <section id="article_Area">
@@ -124,4 +121,18 @@
 <?php get_footer(); ?>
 
 </body>
+
+<script>
+    var swiper = new Swiper(".works-slider", {
+        slidesPerView: 1,
+        loop: true,
+        effect: "fade",
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        speed: 2000,
+    });
+
+</script>
 </html>

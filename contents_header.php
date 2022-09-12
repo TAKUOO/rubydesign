@@ -64,7 +64,7 @@ if (is_page()) {
         </div>
         
         <div class="header_logo">
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/headr_logo.svg" alt="RUBYDESIGN" width="180px"></a>
+            <a href="<?php echo home_url(); ?>" class="flex"><img src="<?php echo get_template_directory_uri(); ?>/img/ruby_icon.png" alt="RUBYDESIGN" width="32px" class="header_logo__icon"><span class="header_logo__name">RUBYDESIGN.</span></a>
         </div>
         <div class="navigation_inner flex">
             <nav>
