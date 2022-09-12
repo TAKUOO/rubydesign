@@ -10,7 +10,7 @@
 
 .main-visual{
   &_inner{
-    max-width: 1400px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 4rem 0 6rem;
     @include lt{
@@ -21,7 +21,7 @@
 
   &_head{
     order: 2;
-    max-width: 740px;
+    max-width: 640px;
     width: 56%;
     flex: 1;
     background: var(--c-black-bg);
