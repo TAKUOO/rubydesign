@@ -1,6 +1,6 @@
 <aside class="aside">
     <section class="aside_content banner_area">
-        <a href="https://saketuma.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_saketuma.png" alt="SAKETUMAのバナー" loading="lazy" class="banner-image"></a>
+        <a href="<?php the_permalink(); ?>/dev_service/wanted-partner.html" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/wanted-partner.jpg" alt="リモートでWEB制作・開発をサポートしていただけるデザイナー/プログラマーを募集！のバナー" loading="lazy" class="banner-image"></a>
     </section>
     <section id="categorys" class="sideContent_Area">
         <h2 class="sidebar_title">記事カテゴリー</h2>

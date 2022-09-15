@@ -55,6 +55,7 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 		  @include sp{
 			  display: block;
 			  margin: 0;
+			  padding: 0;
 		  }
 	  }
 	  article{
@@ -90,9 +91,8 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 				box-sizing:border-box;
 			}
 			a{
-				color: #2196F3;
+				color: var(--c-link);
 				text-decoration: underline;
-				font-style: italic;
 			}
 			p{
 				margin: 30px 0;
@@ -117,13 +117,13 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 				}
 			}
 			ul{
-				padding: 32px;
+				padding: 16px 32px;
 				border-radius: 4px;
-				background: #f7f9f9;
+				background: var(--c-blak-bg-lighter);
 				font-size: 1.6rem;
 				margin-bottom: 20px;
 				@include tab{
-					padding: 24px;
+					padding: 12px 32px;
 				}
 				li{
 					list-style-type: disc;
