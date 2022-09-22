@@ -24,13 +24,12 @@ if (is_page()) {
                     <!-- メニュー -->
                     <section id="menuArea" class="menuOpen_contents_container">
                        
-                        <div id="search_sp">
-                            <h3>サイト内検索</h3>
-                            <?php get_search_form(); ?>
-                        </div>
+<!--                        <div id="search_sp">-->
+<!--                            <h3>サイト内検索</h3>-->
+<!--                            --><?php //get_search_form(); ?>
+<!--                        </div>-->
 
                         <div id="navi_menu">
-                            <h3>メニュー</h3>
                             <div class="contents_wrap">
                                 <nav>
                                 <?php
@@ -46,7 +45,6 @@ if (is_page()) {
                             </div>
                         </div>
                         <div id="navi_socialArea">
-                            <h3>ソーシャル</h3>
                             <div class="contents_wrap">
                                 <ul>
                                     <li><a href="https://twitter.com/matui_takafumi"  target="_blank" ><i class="fab fa-twitter"></i>Twitter</a></li>
