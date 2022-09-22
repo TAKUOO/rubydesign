@@ -1,0 +1,21 @@
+.p-content{
+  &-head{
+    &.--main{
+      text-align: center;
+    }
+
+    .title{
+      font-size: 3.2rem;
+      &.--main{
+        font-size: 4rem;
+      }
+    }
+
+    .lead{
+      &.--main{
+        margin-top: 12px;
+      }
+    }
+
+  }
+}

@@ -5,7 +5,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/works/menta.jpg" alt="株式会社MENTAのUIイメージ">
             </div>
             <div class="swiper-slide__inner">
-                <h3 class="inner__title">株式会社MENTA</h3>
+                <h3 class="inner__title">MENTA株式会社</h3>
                 <span class="inner__lead">いろんなプロに相談できるN0.1メンターサービス</span>
             </div>
         </div>

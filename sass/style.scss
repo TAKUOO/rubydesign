@@ -34,6 +34,8 @@ CSS information
 // project
 // ==========================================================================
 @import "object/project/article_card";
+@import "object/project/content";
+@import "object/project/content_card";
 //@import "object/project/about";
 //@import "object/project/theme_cards";
 //@import "object/project/theme_lists";
@@ -43,7 +45,6 @@ CSS information
 //@import "object/project/room";
 //@import "object/project/block";
 //@import "object/project/user-menu";
-//@import "object/project/content";
 //@import "object/project/open";
 //@import "object/project/playing_members";
 //@import "object/project/label_button";
@@ -66,6 +67,7 @@ CSS information
 @import "pages/contact";
 @import "pages/about";
 @import "pages/guide";
+@import "pages/service";
 //@import "pages/profile";
 //@import "pages/playing-panel";
 //@import "pages/playing-detail";

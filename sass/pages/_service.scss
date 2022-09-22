@@ -1,0 +1,37 @@
+#service{
+  main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6em 4%;
+  }
+
+  .p-content-card{
+    h3{
+      font-size: 2.4rem;
+    }
+    &__text{
+      margin-top: 16px;
+    }
+  }
+
+  #problem{
+    margin-top: 64px;
+  }
+
+  .problem{
+    &-items{
+      margin-top: 40px;
+    }
+
+    &-item{
+      margin-top: 40px;
+      h3{
+        font-size: 2.4rem;
+      }
+      & > p{
+        margin-top: 12px;
+      }
+    }
+  }
+
+}
