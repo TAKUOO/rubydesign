@@ -7,6 +7,9 @@
   .profile{
     &_name{
       margin-top: 1em;
+      @include tab{
+        font-size: 2rem;
+      }
       a{
         text-decoration: underline;
         &:hover{

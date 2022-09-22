@@ -29,17 +29,6 @@
         <p class="copyright">&copy;&thinsp;RUBY&nbsp;DESIGN.</p>
     </div>
 </footer>
-    <script>
-    $('.slick').slick({
-        autoplay: true,
-        infinite: true,
-        // slidesToScroll: 3,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        arrows: false,
-    });
-    </script>
     <script type="text/javascript">
     $(function () {
         $('.tab').click(function () {
@@ -59,11 +48,6 @@
             $('.navi_buttonArea').click(function(){
                 $header.toggleClass('open');
             });
-        });
-    </script>
-    <script>
-        $(function(){
-            $.simpleTicker($("#pickupNews"),{'effectType':'roll'});
         });
     </script>
     <script>
