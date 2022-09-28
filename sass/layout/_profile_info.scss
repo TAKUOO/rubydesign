@@ -1,0 +1,57 @@
+.profile_info{
+  align-items: start;
+  justify-content: space-between;
+  background-color: var(--c-blak-bg-lighter);
+  padding: 1em;
+  border-radius: 8px;
+  @include sp{
+    display: block;
+  }
+  &__avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include tab{
+      margin: 0 auto;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      max-width: 100%;
+      margin: 0 !important;
+    }
+  }
+  &__text{
+    width: calc(100% - 100px);
+    @include sp{
+      width: 100%;
+    }
+    .twitter-button{
+      margin-top: 12px;
+      @include tab{
+        text-align: center;
+      }
+    }
+  }
+  &__name{
+    margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    @include tab{
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 12px;
+    }
+  }
+  &__description{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 0.2em;
+    @include tab{
+      font-size: 1.6rem;
+    }
+  }
+}

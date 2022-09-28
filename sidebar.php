@@ -2,6 +2,18 @@
     <section class="aside_content banner_area">
         <a href="<?php the_permalink(); ?>/dev_service/wanted-partner.html" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/wanted-partner.jpg" alt="リモートでWEB制作・開発をサポートしていただけるデザイナー/プログラマーを募集！のバナー" loading="lazy" class="banner-image"></a>
     </section>
+
+    <!-- 投稿者 -->
+    <section class="profile_info">
+        <div class="profile_info__avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?></div>
+        <div class="profile_info__text">
+            <b class="profile_info__name"><?php the_author(); ?></b>
+            <div class="profile_info__description"><?php the_author_meta('user_description'); ?></div>
+            <div class="twitter-button"><a href="https://twitter.com/matui_takafumi?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="ja" data-show-count="false">Follow @matui_takafumi</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        </div>
+    </section>
+
+
     <section id="categorys" class="sideContent_Area">
         <h2 class="sidebar_title">記事カテゴリー</h2>
         <ul class="cat-items">

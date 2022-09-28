@@ -218,61 +218,8 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 					}
 				}
 			}
-			.Author_Area{
-				align-items: start;
-				justify-content: space-between;
-				padding: 1em;
-				margin-bottom: 1em;
-				border: 1px solid #ddd;
-				border-radius: 8px;
-				@include sp{
-					display: block;
-				}
-				.avatar{
-					width: 80px;
-					height: 80px;
-					border-radius: 50%;
-					@include tab{
-						margin: 0 auto;
-					}
-					img{
-						border:none;
-						margin: 0;
-					}
-				}
-				.text_Area{
-					width: calc(100% - 100px);
-					@include sp{
-						width: 100%;
-					}
-					.name{
-						margin: 0;
-						font-weight: 700;
-						font-size: 2rem;
-						@include tab{
-							text-align: center;
-							font-size: 2rem;
-							margin-top: 12px;
-						}
-					}
-					.descripiton{
-						font-size: 1.6rem;
-						line-height: 1.5;
-						margin: 0;
-						@include tab{
-							font-size: 1.6rem;
-						}
-					}
-					.twitter-button{
-						margin-top: 12px;
-						@include tab{
-							text-align: center;
-						}
-					}
-				}
-			}
 			.ads_Area{
-				margin-bottom: 30px;
+				margin: 30px 0;
 			}
 			.back,
 			.next {

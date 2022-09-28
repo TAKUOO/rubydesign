@@ -10,76 +10,34 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 :focus{
   outline: none;
 }
-/*----------------------------------------------------
-    flex設定
-----------------------------------------------------*/ 
-.flex{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    align-items: center;
-  }
-  .middle{
-    align-items: center;	
-  }
-  .flex_center{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-  }
-  .flex_all{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    display: flex; /* 子要素をflexboxで揃える */
-    flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
-    justify-content: center; /* 子要素をflexboxにより中央に配置する */
-    align-items: center;  /* 子要素をflexboxにより中央に配置する */	
-  }
-  .primaryColor{
-    color: #222;
-  }
-  .primaryBackGroundColor{
-    background: #222;
-    color: #fff;
-  }
-  .secondaryBackGroundColor{
-    background: #000;
-    color: #fff;
-  }
-  .caption_type01{
-    color: #d4005b;
-  }
-  .caption_type02{
-    color: #1700cc;
-  }
-  .caption_type03{
-    color: #ec8f00;
-  }
-  .caption_type04{
-    color: #ea0000;
-  }
-  .sub_button{
-      box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.1);
-        border-radius: 100px;
-        height: 40px;
-        line-height: 40px;
-        display: inline-block;
-  }
+.primaryColor{
+  color: #222;
+}
+.primaryBackGroundColor{
+  background: #222;
+  color: #fff;
+}
+.secondaryBackGroundColor{
+  background: #000;
+  color: #fff;
+}
+.caption_type01{
+  color: #d4005b;
+}
+.caption_type02{
+  color: #1700cc;
+}
+.caption_type03{
+  color: #ec8f00;
+}
+.caption_type04{
+  color: #ea0000;
+}
+.sub_button{
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 100px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+}
  

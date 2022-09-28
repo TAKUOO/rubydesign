@@ -38,11 +38,11 @@
             </div>
 
             <!-- 投稿者 -->
-            <div class="Author_Area flex">
-                <div class="avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?></div>
-                <div class="text_Area">
-                    <p class="name"><?php the_author(); ?></p>
-                    <p class="descripiton"><?php the_author_meta('user_description'); ?></p>
+            <div class="profile_info flex">
+                <div class="profile_info__avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?></div>
+                <div class="profile_info__text">
+                    <b class="profile_info__name"><?php the_author(); ?></b>
+                    <div class="profile_info__description"><?php the_author_meta('user_description'); ?></div>
                     <div class="twitter-button"><a href="https://twitter.com/matui_takafumi?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="ja" data-show-count="false">Follow @matui_takafumi</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
                 </div>
             </div>
