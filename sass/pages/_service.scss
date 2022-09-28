@@ -1,37 +1,257 @@
 #service{
   main{
-    max-width: 800px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 6em 4%;
+
+    @include sp{
+      padding: 3em 4%;
+    }
+  }
+
+  .p-content-cards{
+    @include sp{
+      margin-top: 32px;
+    }
   }
 
   .p-content-card{
+    &:first-of-type{
+      margin-top: 0;
+    }
+
     h3{
       font-size: 2.4rem;
+      @include sp{
+        font-size: 2rem;
+      }
     }
+
     &__text{
       margin-top: 16px;
     }
+
+    .use-case{
+      &__label{
+        margin-top: 1.6em;
+        font-size: 1.4rem;
+        font-weight: 600;
+        opacity: 0.6;
+      }
+      &__text{
+        margin-top: 4px;
+        font-weight: 600;
+      }
+    }
+
   }
 
-  #problem{
+  #problem,
+  #solution,
+  #price,
+  #user-voice,
+  #contact{
     margin-top: 64px;
+    @include tab{
+      margin-top: 56px;
+    }
   }
 
   .problem{
     &-items{
       margin-top: 40px;
+
+      @include sp{
+        margin-top: 24px;
+      }
+
     }
 
     &-item{
-      margin-top: 40px;
+      margin-top: 24px;
+
+      @include sp{
+        margin-top: 16px;
+      }
+
+      &:first-of-type{
+        margin-top: 0;
+      }
+
+      .lead{
+        color: var(--c-yellow-dark);
+        @include sp{
+          font-size: 1.4rem;
+        }
+      }
+
       h3{
         font-size: 2.4rem;
+        margin-top: 8px;
+        @include sp{
+          font-size: 2rem;
+        }
       }
+
       & > p{
         margin-top: 12px;
       }
     }
   }
 
+  .plan-item{
+    padding: 16px;
+    position: relative;
+    &__course{
+      font-size: 1.8rem;
+      color: var( --c-secondary);
+    }
+
+    &__price{
+      font-weight: 600;
+      line-height: 1;
+      margin-top: 4px;
+      .number{
+        font-size: 3.2rem;
+      }
+
+      .unit{
+        font-size: 1.4rem;
+        opacity: 0.6;
+      }
+    }
+
+    &__time,
+    &__description{
+      margin-top: 8px;
+    }
+
+    &__time{
+      opacity: 0.8;
+
+      @include sp{
+        font-size: 1.4rem;
+      }
+
+      .time,
+      .weekly-time{
+        margin-left: 12px;
+      }
+    }
+
+    &__status{
+      position: absolute;
+      font-size: 1.6rem;
+      font-weight: 600;
+      right: 24px;
+      top: 50%;
+      transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      @include tab{
+        position: static;
+        transform: none;
+        margin-top: 12px;
+      }
+      i{
+        padding-right: 8px;
+      }
+    }
+  }
+
+  .solution-item{
+    margin-top: 2em;
+
+    &:first-of-type{
+      margin-top: 0;
+    }
+
+    h3{
+      font-size: 2.4rem;
+      @include sp{
+        font-size: 1.8rem;
+      }
+    }
+
+    & > p,
+    & > ul{
+      margin-top: 12px;
+    }
+    & > ul > li{
+      margin-top: 8px;
+      position: relative;
+      padding-left: 18px;
+      &:before{
+        background-color: var(--c-gray-lighter);
+        width: 6px;
+        height: 6px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0.72em;
+        left: 0;
+        border-radius: 50%;
+        content: '';
+      }
+
+      &:first-of-type{
+        margin-top: 0;
+      }
+
+      a{
+        text-decoration: underline;
+        color: var(--c-link);
+      }
+    }
+
+  }
+
+  .user-voice-item{
+    &__avatar{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+      @include sp{
+        width: 64px;
+        height: 64px;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        max-width: 100%;
+      }
+    }
+
+    &__name {
+      margin-left: 12px;
+      .company-name{
+        font-size: 2.4rem;
+        @include sp{
+          font-size: 1.8rem;
+        }
+      }
+      .name{
+        font-size: 1.6rem;
+      }
+    }
+
+    &__body{
+      margin-top: 1.4em;
+
+    }
+  }
+
+  .contact{
+    &-text{
+      margin-top: 8px;
+      a{
+        text-decoration: underline;
+        color: var(--c-link);
+      }
+    }
+  }
 }

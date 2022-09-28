@@ -8,4 +8,13 @@
   box-sizing: border-box;
   border-radius: 1em;
   margin-top: 24px;
+
+  &__border{
+    @extend .p-content-card;
+    border: 1px solid var(--c-gray-border);
+    &.--focus{
+      border: 1px solid var(--c-secondary);
+    }
+  }
+
 }

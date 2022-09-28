@@ -1,0 +1,14 @@
+.u-tag{
+  font-size: 1.2rem;
+  border-radius: 4px;
+  padding: 4px 8px;
+  line-height: 1;
+  overflow: hidden;
+  margin-left: 4px;
+  display: inline-block;
+  &__recommend{
+    @extend .u-tag;
+    background-color: var(--c-yellow-dark);
+    color: var(--c-white);
+  }
+}
