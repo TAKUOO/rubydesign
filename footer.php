@@ -1,13 +1,19 @@
 <footer>
-    <section id="contactArea" class="secondaryBackGroundColor">
-        <a href="/contact"></a>
-        <div class="tab flex">
-            <h2 class="content-title flex">
-                <span class="en">CONTACT</span>
-                <span class="jp">お問合せ・ご相談</span>
-            </h2>
+    <section class="call-to-action u-color-gradient__blue flex" id="call-to-action">
+        <div class="call-to-action__inner">
+            <h3 class="call-to-action__copy">RUBYDESIGN.は<span>顧問・パートナーとしての運用実績があります。</span>詳しくはお問い合わせください。</h3>
+            <p class="call-to-action__text">新規サービス、社内業務システム開発、デザイン・開発会社向け受託案件サポート、WEBコンサルなど御社の求められることに柔軟に対応いたします。 </p>
+            <dl class="use-case">
+                <dt class="use-case__label">利用ケース</dt>
+                <dd class="use-case__text">新しくサービスを立ち上げたい、問題点から一緒に解決案を考えてほしい、作りながら考えたい、意見をもらいたい</dd>
+            </dl>
+            <div class="call-to-action__buttons flex">
+                <a href="/contact" class="call-to-action__button">お問合せ・相談する</a>
+                <a href="/service" class="call-to-action__button no-border --red">サービスをみる</a>
+            </div>
         </div>
     </section>
+
     <div class="sitemap flex">
         <nav>
             <?php

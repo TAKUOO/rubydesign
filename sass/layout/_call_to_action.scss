@@ -1,0 +1,71 @@
+.call-to-action{
+  border-radius: 16px;
+  padding: 60px;
+  box-sizing: border-box;
+  justify-content: center;
+
+  @include tab{
+    padding: 8% 6%;
+  }
+
+  &__inner{
+    max-width: 800px;
+  }
+
+  &__copy{
+    font-size: 3.2rem;
+    text-align: center;
+    line-height: 1.6;
+    @include tab{
+      font-size: 2.4rem;
+    }
+
+    @include sp{
+      font-size: 2rem;
+    }
+
+    span{
+      display: block;
+      @include sp{
+        display: inline-block;
+      }
+    }
+  }
+
+  &__text{
+    margin-top: 3rem;
+  }
+
+  &__buttons{
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 2em;
+
+    @include tab{
+      gap: 1.6em;
+    }
+  }
+
+  &__button{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 100px;
+    border: 1px solid var(--c-gray-lighter);
+    background-color: rgb(var(--c-black-bg-rgb),.5);
+    flex: 1;
+
+    @include tab{
+      flex: initial;
+      width: 100%;
+      font-size: 1.8rem;
+    }
+
+    &.--red{
+      background-color: #D00133;
+    }
+
+  }
+
+}

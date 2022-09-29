@@ -1,5 +1,15 @@
+@mixin gradient($direction: 90deg, $color-1: #6999B5, $color-2: #3A285F) {
+  background-image: linear-gradient($direction, $color-1, $color-2);
+}
+
 .u-color{
   &__green{
     color: var(--c-green);
+  }
+
+}
+.u-color-gradient{
+  &__blue{
+    @include gradient();
   }
 }
