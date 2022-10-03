@@ -25,9 +25,21 @@ $sp: 480px;  // スマホ
   }
 
 aside{
+
+	.banner_area > a{
+		margin-top: 1em;
+		display: block;
+
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+
 	.banner-image{
 		width:100%;
 		height: auto;
+		border-radius: 8px;
+		overflow: hidden;
 	}
 
 	h2{
