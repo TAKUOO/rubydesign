@@ -17,7 +17,7 @@ Template Post Type: page
                 <img src="<?php echo get_template_directory_uri(); ?>/img/img_profile.jpg" alt="松井貴史のプロフィール写真" loading="lazy" class="profile_img">
             </picture>
             <h2 class="profile_name"><a href="https://twitter.com/matui_takafumi" target="_blank" rel="noopener">松井 貴史 / TAKAFUMI MATSUI</a></h2>
-            <p>1984年 熊本出身。バックメーカーでのプロダクトデザイナー、旅館・ホテル専門の制作会社のWEB制作チームを経て2014年に独立し、フリーランスとしてのキャリアをスタートし、UIを中心のプロダクトデザイン設計を行う。</p>
+            <p>1984年 熊本出身。旅館・ホテル専門の制作会社のWEB制作チームを経て2014年に独立し、フリーランスとしてのキャリアをスタート。顧問・パートナー型の受託専門WEBデザイナー兼ディベロッパーとしてUXUI改善運用からWEBシステム開発までワンストップで提供しています。</p>
         </section>
 
         <section id="infomation" class="contents">
