@@ -50,36 +50,66 @@ Template Post Type: page
         </section>
 
         <section id="project" class="contents">
-            <h2>プロジェクト</h2>
-            <div class="contents_block">
-                <h4>MENTA株式会社</h4>
-                <em>BtoC,2020/10月〜2022/8月</em>
-                <p>いろんなプロに相談できるN0.1メンターサービス。デザイナーとして参画。サービスサイトの仕様検討からフロントのデザイン実装などデザインに関わる全ての領域を横断的に携わる。</p>
+            <h2>実績 | パートナー企業様</h2>
+            <div class="p-work-item work-item contents_block flex">
+                <div class="p-work-item__text">
+                    <h4><a href="https://menta.work/" target="_blank" rel="noopener">MENTA株式会社</a></h4>
+                    <em>BtoC,2020/10月〜2022/8月</em>
+                    <p>いろんなプロに相談できるN0.1メンターサービス。デザイナーとして参画。サービスサイトの仕様検討からフロントのデザイン実装などデザインに関わる全ての領域を横断的に携わる。</p>
+                </div>
+                <picture class="p-work-item__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/works/menta_s.jpg" alt="MENTA株式会社" loading="lazy">
+                </picture>
             </div>
-            <div class="contents_block">
-                <h4>株式会社NOVASTO</h4>
-                <em>BtoB,2021/4月〜</em>
-                <p>リユース × ITを軸にシステム開発事業・コンサルティング事業・マーケットプレイス運営事業の3つの事業を展開するIT企業。次世代クラウドPOSシステム｜ReCORE (リコア)のプロダクトの業務システムのUX/UIをはじめ、サービスサイトなどの実装に携わる。</p>
+            <div class="p-work-item work-item contents_block flex">
+                <div class="p-work-item__text">
+                    <h4><a href="https://novasto.co.jp/" target="_blank" rel="noopener">株式会社NOVASTO</a></h4>
+                    <em>BtoB,2021/4月〜</em>
+                    <p>リユース × ITを軸にシステム開発事業・コンサルティング事業・マーケットプレイス運営事業の3つの事業を展開するIT企業。次世代クラウドPOSシステム｜ReCORE (リコア)のプロダクトの業務システムのUX/UIをはじめ、サービスサイトなどの実装に携わる。</p>
+                </div>
+                <picture class="p-work-item__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/works/novasto_s.jpg" alt="株式会社NOVASTOの画像" loading="lazy">
+                </picture>
             </div>
-            <div class="contents_block">
-                <h4>株式会社ものばんく</h4>
-                <em>BtoB,2019/10月〜</em>
-                <p>60年以上の伝統あるモノの銀行 monobankグループ。下関に本社を構えイノーベーションを起こし続ける企業にデザイナとして参加。オウンドメディア及びコーポレイトサイトなどの、ブランドイメージやマーケティングに関わるデザインを担当。</p>
+            <div class="p-work-item work-item contents_block flex">
+                <div class="p-work-item__text">
+                    <h4><a href="https://monobank.jp/" target="_blank" rel="noopener">株式会社ものばんく</a></h4>
+                    <em>BtoB,2019/10月〜</em>
+                    <p>60年以上の伝統あるモノの銀行 monobankグループ。下関に本社を構えイノーベーションを起こし続ける企業にデザイナとして参加。オウンドメディア及びコーポレイトサイトなどの、ブランドイメージやマーケティングに関わるデザインを担当。</p>
+                </div>
+                <picture class="p-work-item__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/works/monobank_s.jpg" alt="株式会社monobankの画像" loading="lazy">
+                </picture>
             </div>
-            <div class="contents_block">
-                <h4>MEKIKI</h4>
-                <em>BtoB,2018/10月〜</em>
-                <p>鑑定士×AIを軸としたスタートアップ。UIデザイン、WEBサイト、改善案等、プロジェクトメンバーとして参加。</p>
+            <div class="p-work-item work-item contents_block flex">
+                <div class="p-work-item__text">
+                    <h4><a href="https://www.mekiki.ai/" target="_blank" rel="noopener">株式会社MEKIKI</a></h4>
+                    <em>BtoB,2018/10月〜</em>
+                    <p>鑑定士×AIを軸としたスタートアップ。UIデザイン、WEBサイト、改善案等、プロジェクトメンバーとして参加。</p>
+                </div>
+                <picture class="p-work-item__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/works/mekiki_s.jpg" alt="株式会社MEKIKIの画像" loading="lazy">
+                </picture>
             </div>
-            <div class="contents_block">
-                <h4>MyReco</h4>
-                <em>BtoB,2018/12月〜2019/9月</em>
-                <p>AI技術を専門的に扱う企業TeamAibod。AIによる自社プロダクト、StrataLink/Myrecoプロジェクトのデザイナーとして参加。デザインとフロントまでを実装。</p>
+            <div class="p-work-item work-item contents_block flex">
+                <div class="p-work-item__text">
+                    <h4><a href="https://aibod.com/index.php/our-offers/our-products/strataLink" target="_blank" rel="noopener">MyReco</a></h4>
+                    <em>BtoB,2018/12月〜2019/9月</em>
+                    <p>AI技術を専門的に扱う企業TeamAibod。AIによる自社プロダクト、StrataLink/Myrecoプロジェクトのデザイナーとして参加。デザインとフロントまでを実装。</p>
+                </div>
+                <picture class="p-work-item__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/works/myreco_s.jpg" alt="myrecoの画像" loading="lazy">
+                </picture>
             </div>
-            <div class="contents_block">
-                <h4>ベビmatch</h4>
-                <em>BtoC,2018/9月〜2019/8月</em>
-                <p>不妊時の心理的な課題を解決するWEBサービスのプロジェクトに参加。不妊時の状態管理・パートナーとの共有などを行えるツールの提供。</p>
+            <div class="p-work-item work-item contents_block flex">
+                <div class="p-work-item__text">
+                    <h4><a href="https://bebimatch.com/" target="_blank" rel="noopener">ベビmatch</a></h4>
+                    <em>BtoC,2018/9月〜2019/8月 サービス終了</em>
+                    <p>不妊時の心理的な課題を解決するWEBサービスのプロジェクトに参加。不妊時の状態管理・パートナーとの共有などを行えるツールの提供。</p>
+                </div>
+                <picture class="p-work-item__image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/works/bebimatch_s.jpg" alt="ベビmatchの画像" loading="lazy">
+                </picture>
             </div>
         </section>
 

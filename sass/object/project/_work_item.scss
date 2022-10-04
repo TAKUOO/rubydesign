@@ -1,0 +1,27 @@
+.p-work-item{
+  justify-content: space-between;
+  &__text{
+    flex: 0 1 62%;
+    @include tab{
+      flex: initial;
+      order: 2;
+      margin-top: 1.6em;
+    }
+  }
+
+  &__image{
+    flex: 0 1 34%;
+    border-radius: 0.5em;
+    overflow: hidden;
+
+    @include tab{
+      flex: initial;
+      order: 1;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+
+}
