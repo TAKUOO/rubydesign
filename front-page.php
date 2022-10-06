@@ -31,50 +31,26 @@
     </div>
 </section>
 
-<!-- サービス紹介 -->
-<!--<section id="projectArea">-->
-<!--    <h2 class="content-title flex">-->
-<!--        <span class="en">PROJECT</span>-->
-<!--        <span class="jp">実績</span>-->
-<!--    </h2>-->
-<!--    <div class="contents_Inner">-->
-<!--        <article class="card_smoll">-->
-<!--            <div class="eyecath">-->
-<!--                <img src="--><?php //echo get_template_directory_uri(); ?><!--/img/monobak_ogp.jpg" alt="">-->
-<!--            </div>-->
-<!--            <div class="card_infoArea">-->
-<!--                <div class="card_infoArea_textArea">-->
-<!--                    <p class="text">二次流通業界のコミュニケーションメディア</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </article>-->
-<!--        <article class="card_smoll">-->
-<!--            <div class="eyecath">-->
-<!--                <img src="--><?php //echo get_template_directory_uri(); ?><!--/img/mekiki_ogp.jpg" alt="">-->
-<!--            </div>-->
-<!--            <div class="card_infoArea">-->
-<!--                <div class="card_infoArea_textArea">-->
-<!--                    <p class="text">WEBで完結できる鑑定・査定サポートサービス</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </article>-->
-<!--        <article class="card_smoll">-->
-<!--            <div class="eyecath">-->
-<!--                <img src="--><?php //echo get_template_directory_uri(); ?><!--/img/teamAibod_opg.jpg" alt="">-->
-<!--            </div>-->
-<!--            <div class="card_infoArea">-->
-<!--                <div class="card_infoArea_textArea">-->
-<!--                    <p class="text">コミュニケーションした相手との関係をAIで可視化する</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </article>-->
-<!--    </div>-->
-<!--</section>-->
+<section id="top-service" class="top-service">
+    <h2 class="content-title">
+        <span class="en">SERVICE</span>
+        <span class="jp">サービス</span>
+    </h2>
+    <h3>月額定額制の顧問スタイル</h3>
+    <div class="top-service__content p-content-card">
+        <h4>
+            <span class="u-color__gray top-service__lead">仕様を決めるのが難しい、事業理解やサービス理解に時間かかる、仕様変更が難しい</span>
+            <span class="top-service__copy">納品が引き起こすあらゆる課題を解決し<span>IT活用による事業の成長を支えます。</span></span>
+        </h4>
+        <p class="top-service__desc">「納品して終わり」ではなく、新しくサービスを立ち上げたい、問題点から一緒に解決案を考えてほしい、作りながら考えたい、意見をもらいたい、などお客様のパートナーとしてデザインからシステムまでをワンストップで提供できることがRUBYDESIGN.の強みです。</p>
+        <a href="/service" class="top-service__button call-to-action__button no-border --red">サービスをみる</a>
+    </div>
+</section>
 
 <!-- ブログ -->
 <section id="article_Area">
 
-    <h2 class="content-title flex">
+    <h2 class="content-title">
         <span class="en">OUT PUT</span>
         <span class="jp">情報発信</span>
     </h2>

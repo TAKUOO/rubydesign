@@ -12,7 +12,7 @@
   &_inner{
     max-width: 1240px;
     margin: 0 auto;
-    padding: 4rem 0 6rem;
+    padding: 4rem 0 0;
     @include lt{
       padding: 0 0 4rem;
       display: block !important;

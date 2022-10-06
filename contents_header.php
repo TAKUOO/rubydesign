@@ -44,13 +44,6 @@ if (is_page()) {
                                 <a href="<?php echo home_url(); ?>/contact" class="button">お問い合わせ</a>
                             </div>
                         </div>
-                        <div id="navi_socialArea">
-                            <div class="contents_wrap">
-                                <ul>
-                                    <li><a href="https://twitter.com/matui_takafumi"  target="_blank" ><i class="fab fa-twitter"></i>Twitter</a></li>
-                                </ul>
-                            </div>
-                        </div>
                     </section>
                 </div>
             </div>

@@ -10,11 +10,11 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 	}
 }
 .content-title{
+	text-align: center;
 	.en{
 		font-size: 4rem;
-		font-weight: 400;
-		font-family: 'Roboto Condensed', sans-serif;
 		line-height: 1;
+		display: block;
 		@include tab{
 			font-size: 3.2rem;
 			display: block;
@@ -23,9 +23,10 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 	}
 	.jp{
 		font-size: 1.8rem;
-		padding-left: 16px;
-		opacity: 0.6;
+		margin-top: .5em;
+		color: var(--c-secondary);
 		line-height: 1;
+		display: block;
 		@include tab{
 			padding: 0.5em 0 0;
 			font-size: 1.6rem;
@@ -34,52 +35,60 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 }
 
 /*----------------------------------------------------
-    #workstyle
+   .top-service
 ----------------------------------------------------*/
-#workstyle{
-	.contents_Inner{
-		justify-content: space-between;
-		margin: 6vw auto;
+.top-service{
+	h3{
+		text-align: center;
+		font-size: 4rem;
+		margin-top: 1em;
 		@include tab{
-			margin: 10vw auto;
+			font-size: 2.4rem;
 		}
 	}
-	.text_Area{
-			width: 46%;
-			@include tab{
-				width: 100%;
-			}
-		h2{
-			font-size: 2.7vmax;
-			margin-bottom: 2vw;
-			@include tab{
-				text-align: center;
-				font-size: 4vmax;
-			}
+
+	&__content{
+		max-width: 1040px;
+		margin: 2em auto 0;
+		background-color: var(--c-white);
+		border-radius: 2em;
+		color: var(--c-black);
+		padding: 3em 6em;
+		@include tab{
+			padding: 24px 4%;
 		}
-		p{
-			margin: 20px 0;
-			font-size: 1.8rem;
+		h4{
+			text-align: center;
+		}
+	}
+	&__lead{
+		@include tab{
+			font-size: 1.4rem;
+		}
+	}
+	&__copy{
+		font-size: 3.2rem;
+		display: block;
+		margin-top: .5em;
+		@include tab{
+			font-size: 2.4rem;
+		}
+		span{
+			display: block;
 			@include tab{
-				font-size: 1.6rem;
-			}
-			span{
-				display: block;
-				@include tab{
-					display: inline;
-				}
+				display: initial;
 			}
 		}
 	}
-	.image_Area{
-		width: 38%;
-		@include tab{
-			width: 60%;
-			margin: 0 auto;
-		}
-		img{
-			width: 100%;
-		}
+	&__desc{
+		margin-top: 2em;
+	}
+	&__button{
+		width: 100%;
+		display: block;
+		max-width: 320px;
+		margin: 1em auto 0;
+		box-sizing: border-box;
 	}
 }
 
@@ -87,41 +96,23 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
     #projectArea
 ----------------------------------------------------*/
 .home{
-	#projectArea,
+	#top-service,
 	#article_Area{
-		padding: 3em 2% 0;
+		padding: 0 2%;
 		max-width: 1240px;
-		margin: 0 auto;
+		margin: 100px auto 0;
 		@include tab{
-			padding: 2em 4% 0;
+			padding: 0 4%;
 
+		}
+	}
+	#article_Area{
+		.contents_Inner{
+			margin-top: 6rem;
 		}
 	}
 }
 
-#projectArea{
-	.contents_Inner{
-		display: -ms-grid;
-		display: grid;
-		-ms-grid-columns: 1fr 1fr 1fr;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 2%;
-		@include tab{
-			display: block;
-		}
-		.card_smoll{
-			border: none;
-			padding:0;
-			margin:0;
-			@include tab{
-				margin-bottom: 8vw;
-			}
-			img{
-				border-radius: 4px;
-			}
-		}
-	}
-}
 #blogArea{
 	.blogArea_contents_Inner{
 		margin-bottom: 4%;
