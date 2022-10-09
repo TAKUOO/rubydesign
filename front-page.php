@@ -18,9 +18,9 @@
                 <p>外部チームを持てば、依頼の度に時間の掛かる事業・サービス理解もショートカットできます。</p>
             </div>
             <div class="cv-buttons flex">
-                <a role="button" href="/blog" class="cv-button c-button-round flex">
+                <a role="button" href="/about#project" class="cv-button c-button-round flex">
                     <span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon/note@2x.svg"></span>
-                    <span class="label">記事を読む</span>
+                    <span class="label">実績をみる</span>
                 </a>
                 <a role="button" href="/contact" class="cv-button c-button-round flex">
                     <span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon/mail@2x1.svg"></span>
@@ -46,6 +46,63 @@
         <a href="/service" class="top-service__button call-to-action__button no-border --red">サービスをみる</a>
     </div>
 </section>
+
+
+<section id="top-user-voice" class="top-user-voice">
+    <h2 class="content-title">
+        <span class="en">USER VOICE</span>
+        <span class="jp">パートナー企業様からのコメント</span>
+    </h2>
+    <div class="p-content-cards swiper">
+        <div class="swiper-wrapper">
+            <div class="p-content-card user-voice-item swiper-slide">
+                <div class="user-voice-item__head flex">
+                    <span class="user-voice-item__avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/avatar/irie_shingo.jpg" alt="入江慎吾" loading="lazy"></span>
+                    <div class="user-voice-item__name">
+                        <b class="company-name">MENTA株式会社</b>
+                        <p class="name">代表取締役社長 入江 慎吾</p>
+                    </div>
+                </div>
+                <div class="user-voice-item__body">
+                    <p>松井さんとは数年一緒に仕事をしていますが、単なる職種としてのデザイナーではくくれない方です。ビジネス思考を持ち、必要ならプログラミングもやってしまう。利用者であるユーザーが求めていることを知り、一緒に対話しながら解決策を考えていく。あくまでもその手段がデザインであるという考えです。逆に言えば、決まった仕様や内容をデザインするだけでは松井さんにお願いするのはもったいないなと思います。一緒に信頼してビジネスができるパートナーです。</p>
+                </div>
+            </div>
+            <div class="p-content-card user-voice-item swiper-slide">
+                <div class="user-voice-item__head flex">
+                    <span class="user-voice-item__avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/avatar/yoshimura_tomohiro.jpg" alt="吉村知宏" loading="lazy"></span>
+                    <div class="user-voice-item__name">
+                        <b class="company-name">株式会社MONOBANK</b>
+                        <p class="name">鑑定士 吉村知宏</p>
+                    </div>
+                </div>
+                <div class="user-voice-item__body">
+                    <p>松井さんは数年弊社のデザイナーとして仕事をしてくれてます。
+                        私自身、WEBについて知識の疎い部分があるのですがそんな私にも分かりやすい言葉で説明してくれ、大変助かっています。
+                        実際のお仕事も見た目のデザインだけではなく、対話の中でこちらの意図をくみ取り集客までのデザインも構築してくれます。
+                        まさにプロの仕事をしてくれるかけがえのないパートナーだと思っています。
+                    </p>
+                </div>
+            </div>
+            <div class="p-content-card user-voice-item swiper-slide">
+                <div class="user-voice-item__head flex">
+                    <span class="user-voice-item__avatar"><img src="<?php echo get_template_directory_uri(); ?>/img/avatar/suefuji_wakako.jpg" alt="末藤 和佳子" loading="lazy"></span>
+                    <div class="user-voice-item__name">
+                        <b class="company-name">ご一緒したメンバーの声</b>
+                        <p class="name">UXデザイナー 末藤 和佳子</p>
+                    </div>
+                </div>
+                <div class="user-voice-item__body">
+                    <p>ビジネス面での課題をお持ちのクライアント案件で真っ先にお声かけするのが松井さんです。
+                        これまで、いくつかのプロジェクトでご一緒させて頂きましたが、ビジネス、クリエイティブ、テクノロジーと多方面に明るく、まさにBTC人材であると感じております。
+                        また、ご自身でもプロダクトを開発しサービス化されている為、顧客視点とマーケット視点とをバランス良く持たれており提案のアウトカムも顧客満足度の高いものとなっています。
+                        今後、益々活動の領域を広げられると期待しています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- ブログ -->
 <section id="article_Area">
@@ -75,18 +132,22 @@
 
 <?php get_footer(); ?>
 
-</body>
-
 <script>
-    var swiper = new Swiper(".works-slider", {
+    const mySwiper = new Swiper(".swiper", {
         slidesPerView: 1,
+        spaceBetween: 32,
         loop: true,
-        effect: "fade",
+        loopAdditionalSlides: 1,
+        speed: 1500,
         autoplay: {
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
         },
-        speed: 2000,
+        grabCursor: true,
+        watchSlidesProgress: true,
     });
 </script>
+
+</body>
+
 </html>

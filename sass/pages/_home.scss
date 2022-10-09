@@ -55,7 +55,7 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 		color: var(--c-black);
 		padding: 3em 6em;
 		@include tab{
-			padding: 24px 4%;
+			padding: 8%;
 		}
 		h4{
 			text-align: center;
@@ -92,17 +92,34 @@ style info : リセット及びbody初期設定 (このスタイルシートは�
 	}
 }
 
-/*----------------------------------------------------
-    #projectArea
-----------------------------------------------------*/
+.top-user-voice{
+	overflow: hidden;
+	box-sizing: border-box;
+	.swiper{
+		overflow: visible;
+		max-width: 740px;
+	}
+	.p-content-card{
+		margin-top: 0;
+	}
+	.swiper-slide {
+		&:not(.swiper-slide-visible) {
+			pointer-events: none;
+			opacity: .3;
+		}
+	}
+}
+
 .home{
 	#top-service,
-	#article_Area{
+	#article_Area,
+	#top-user-voice{
 		padding: 0 2%;
 		max-width: 1240px;
-		margin: 100px auto 0;
+		margin: 8em auto 0;
 		@include tab{
 			padding: 0 4%;
+			margin: 4em auto 0;
 
 		}
 	}

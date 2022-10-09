@@ -1,0 +1,38 @@
+.user-voice-item{
+  &__avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    @include sp{
+      width: 64px;
+      height: 64px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    margin-left: 12px;
+    .company-name{
+      font-size: 2.4rem;
+      @include sp{
+        font-size: 1.8rem;
+      }
+    }
+    .name{
+      font-size: 1.6rem;
+    }
+  }
+
+  &__body{
+    margin-top: 1.4em;
+
+  }
+}
