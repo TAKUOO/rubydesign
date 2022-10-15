@@ -7,6 +7,10 @@ if (is_page()) {
 
 ?>
 <body <?php echo $body_id; ?> <?php body_class(); ?>>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZPZJVV"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 <!-- ヘッダー -->
 <header>

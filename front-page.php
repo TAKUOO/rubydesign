@@ -148,6 +148,19 @@
     });
 </script>
 
+<script>
+    var swiper = new Swiper(".works-slider", {
+        slidesPerView: 1,
+        loop: true,
+        effect: "fade",
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        speed: 2000,
+    });
+</script>
+
 </body>
 
 </html>
