@@ -8,7 +8,7 @@ on:
         required: true
       deploy_log_id:
         description: 'Deploy Log ID'
-        required: true
+        required: false
 
 jobs:
   deploy:
