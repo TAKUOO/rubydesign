@@ -1,7 +1,4 @@
 <aside class="aside">
-    <section class="aside_content banner_area">
-        <a href="<?php the_permalink(); ?>/service/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner/service.png" alt="顧問エンジニアサービスのバナー" loading="lazy" class="banner-image"></a>
-    </section>
 
     <!-- 投稿者 -->
     <section class="profile_info">
