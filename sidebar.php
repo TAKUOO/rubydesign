@@ -1,7 +1,6 @@
 <aside class="aside">
     <section class="aside_content banner_area">
         <a href="<?php the_permalink(); ?>/service/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner/service.png" alt="顧問エンジニアサービスのバナー" loading="lazy" class="banner-image"></a>
-        <a href="https://mention.work/lp" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner/mention.jpg" alt="Mention（メンション）|フリーランス・副業者向け！信頼ベースの仲間探しマッチングサービス" loading="lazy" class="banner-image"></a>
     </section>
 
     <!-- 投稿者 -->
