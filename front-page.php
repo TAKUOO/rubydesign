@@ -31,23 +31,6 @@
     </div>
 </section>
 
-<section id="top-service" class="top-service">
-    <h2 class="content-title">
-        <span class="en">SERVICE</span>
-        <span class="jp">サービス</span>
-    </h2>
-    <h3>月額定額制の顧問スタイル</h3>
-    <div class="top-service__content p-content-card">
-        <h4>
-            <span class="u-color__gray top-service__lead">仕様を決めるのが難しい、事業理解やサービス理解に時間かかる、仕様変更が難しい</span>
-            <span class="top-service__copy">納品が引き起こすあらゆる課題を解決し<span>IT活用による事業の成長を支えます。</span></span>
-        </h4>
-        <p class="top-service__desc">「納品して終わり」ではなく、新しくサービスを立ち上げたい、問題点から一緒に解決案を考えてほしい、作りながら考えたい、意見をもらいたい、などお客様のパートナーとしてデザインからシステムまでをワンストップで提供できることがRUBYDESIGN.の強みです。</p>
-        <a href="/service" class="top-service__button call-to-action__button no-border --red">サービスをみる</a>
-    </div>
-</section>
-
-
 <section id="top-user-voice" class="top-user-voice">
     <h2 class="content-title">
         <span class="en">USER VOICE</span>

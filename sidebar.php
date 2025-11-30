@@ -1,5 +1,6 @@
 <aside class="aside">
 
+
     <!-- 投稿者 -->
     <section class="profile_info">
         <div class="profile_info__avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?></div>
