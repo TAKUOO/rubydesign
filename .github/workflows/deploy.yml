@@ -8,7 +8,11 @@ on:
         required: true
       deploy_log_id:
         description: 'Deploy Log ID'
-        required: true
+        required: false
+      server_dir:
+        description: 'Server directory path'
+        required: false
+        default: '/public_html/'
 
 jobs:
   deploy:
@@ -23,4 +27,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /public_html/
+          server-dir: ${{ inputs.server_dir || '/public_html/' }}
